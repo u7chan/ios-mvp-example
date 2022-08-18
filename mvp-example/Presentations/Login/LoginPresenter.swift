@@ -7,16 +7,14 @@
 
 import Foundation
 
-// MARK: - Presenter Implementation
-
-final class LoginPresenterImpl {
-    private weak var view: LoginView?
+final class LoginPresenter {
+    private weak var view: LoginViewProtocol?
 }
 
-// MARK: - LoginPresenter Delegate
+// MARK: - LoginPresenterProtocol
 
-extension LoginPresenterImpl: LoginPresenter {
-    func viewAttach(view: LoginView) {
+extension LoginPresenter: LoginPresenterProtocol {
+    func viewAttach(view: LoginViewProtocol) {
         self.view = view
     }
 

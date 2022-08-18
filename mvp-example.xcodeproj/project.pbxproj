@@ -20,9 +20,9 @@
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
 		AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30828ACBD5F00FBC729 /* DashboardProtocols.swift */; };
 		AC94C30C28ACBE3600FBC729 /* VCModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30B28ACBE3600FBC729 /* VCModules.swift */; };
-		AC94C31028AE702C00FBC729 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30F28AE702C00FBC729 /* UserRepository.swift */; };
-		AC94C31228AE70F800FBC729 /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31128AE70F800FBC729 /* UserRepositoryImpl.swift */; };
-		AC94C31628AE722900FBC729 /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31528AE722900FBC729 /* LoginApi.swift */; };
+		AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */; };
+		AC94C31228AE70F800FBC729 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31128AE70F800FBC729 /* UserRepository.swift */; };
+		AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31528AE722900FBC729 /* LoginApiProtocol.swift */; };
 		AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31828AE728F00FBC729 /* LoginApiRequest.swift */; };
 		AC94C31B28AE737E00FBC729 /* LoginApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31A28AE737E00FBC729 /* LoginApiResponse.swift */; };
 		AC94C31D28AE74B000FBC729 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31C28AE74B000FBC729 /* ApiError.swift */; };
@@ -30,6 +30,9 @@
 		AC94C32128AE74DA00FBC729 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32028AE74DA00FBC729 /* DomainError.swift */; };
 		AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32328AE773C00FBC729 /* LoginApiFake.swift */; };
 		AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */; };
+		AC94C32928AE7F6600FBC729 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32828AE7F6600FBC729 /* User.swift */; };
+		AC94C32C28AE825100FBC729 /* LoginUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */; };
+		AC94C32E28AE83A500FBC729 /* LoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -71,9 +74,9 @@
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		AC94C30828ACBD5F00FBC729 /* DashboardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardProtocols.swift; sourceTree = "<group>"; };
 		AC94C30B28ACBE3600FBC729 /* VCModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCModules.swift; sourceTree = "<group>"; };
-		AC94C30F28AE702C00FBC729 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		AC94C31128AE70F800FBC729 /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
-		AC94C31528AE722900FBC729 /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApi.swift; sourceTree = "<group>"; };
+		AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AC94C31128AE70F800FBC729 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		AC94C31528AE722900FBC729 /* LoginApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiProtocol.swift; sourceTree = "<group>"; };
 		AC94C31828AE728F00FBC729 /* LoginApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiRequest.swift; sourceTree = "<group>"; };
 		AC94C31A28AE737E00FBC729 /* LoginApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiResponse.swift; sourceTree = "<group>"; };
 		AC94C31C28AE74B000FBC729 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -81,6 +84,9 @@
 		AC94C32028AE74DA00FBC729 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		AC94C32328AE773C00FBC729 /* LoginApiFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiFake.swift; sourceTree = "<group>"; };
 		AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleepMillis.swift"; sourceTree = "<group>"; };
+		AC94C32828AE7F6600FBC729 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecaseProtocol.swift; sourceTree = "<group>"; };
+		AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecase.swift; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				AC94C30D28AE6F5400FBC729 /* Constants */,
 				ACEFA54528ABF38C00B7355A /* Model */,
 				ACEFA54428ABF37D00B7355A /* Repositories */,
+				AC94C32A28AE821000FBC729 /* Usecases */,
 				AC94C30A28ACBE0000FBC729 /* DI */,
 				ACEFA54328ABF35A00B7355A /* Presentations */,
 				AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */,
@@ -211,7 +218,7 @@
 			children = (
 				AC94C31828AE728F00FBC729 /* LoginApiRequest.swift */,
 				AC94C31A28AE737E00FBC729 /* LoginApiResponse.swift */,
-				AC94C31528AE722900FBC729 /* LoginApi.swift */,
+				AC94C31528AE722900FBC729 /* LoginApiProtocol.swift */,
 				AC94C32328AE773C00FBC729 /* LoginApiFake.swift */,
 			);
 			path = Login;
@@ -227,6 +234,23 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		AC94C32728AE7F5700FBC729 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AC94C32828AE7F6600FBC729 /* User.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AC94C32A28AE821000FBC729 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */,
+				AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
 		ACEFA54328ABF35A00B7355A /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,8 +264,8 @@
 		ACEFA54428ABF37D00B7355A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				AC94C30F28AE702C00FBC729 /* UserRepository.swift */,
-				AC94C31128AE70F800FBC729 /* UserRepositoryImpl.swift */,
+				AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */,
+				AC94C31128AE70F800FBC729 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -249,6 +273,7 @@
 		ACEFA54528ABF38C00B7355A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC94C32728AE7F5700FBC729 /* Entity */,
 				AC94C31428AE71E100FBC729 /* Storage */,
 				AC94C31328AE71DC00FBC729 /* Api */,
 			);
@@ -424,19 +449,22 @@
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
-				AC94C31628AE722900FBC729 /* LoginApi.swift in Sources */,
+				AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */,
 				AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
-				AC94C31028AE702C00FBC729 /* UserRepository.swift in Sources */,
+				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
+				AC94C32E28AE83A500FBC729 /* LoginUsecase.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
+				AC94C32C28AE825100FBC729 /* LoginUsecaseProtocol.swift in Sources */,
 				AC94C31F28AE74C200FBC729 /* ViewError.swift in Sources */,
 				AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */,
 				AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */,
 				AC94C31D28AE74B000FBC729 /* ApiError.swift in Sources */,
-				AC94C31228AE70F800FBC729 /* UserRepositoryImpl.swift in Sources */,
+				AC94C31228AE70F800FBC729 /* UserRepository.swift in Sources */,
 				AC94C32128AE74DA00FBC729 /* DomainError.swift in Sources */,
 				AC94C31B28AE737E00FBC729 /* LoginApiResponse.swift in Sources */,
+				AC94C32928AE7F6600FBC729 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

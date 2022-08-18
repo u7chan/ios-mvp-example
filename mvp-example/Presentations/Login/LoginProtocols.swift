@@ -7,15 +7,11 @@
 
 import Foundation
 
-// MARK: - For View Delegate
-
-protocol LoginView: AnyObject {
+protocol LoginViewProtocol: AnyObject {
     func navigateToDashboard()
 }
 
-// MARK: - For Presenter Delegate
-
-protocol LoginPresenter: AnyObject {
-    func viewAttach(view: LoginView)
+protocol LoginPresenterProtocol: AnyObject {
+    func viewAttach(view: LoginViewProtocol)
     func doLogin()
 }

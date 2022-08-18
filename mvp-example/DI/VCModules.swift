@@ -9,14 +9,14 @@ import UIKit
 
 struct VCModules {
     static func createLoginViewController() -> UIViewController {
-        let presenter = LoginPresenterImpl()
+        let presenter = LoginPresenter()
         let vc = LoginViewController(presenter: presenter)
         vc.modalPresentationStyle = .fullScreen
         return vc
     }
 
     static func createDashboardViewController() -> UIViewController {
-        let presenter = DashboardPresenterImpl()
+        let presenter = DashboardPresenter()
         let vc = DashboardViewController(presenter: presenter)
         vc.modalPresentationStyle = .fullScreen
         return vc

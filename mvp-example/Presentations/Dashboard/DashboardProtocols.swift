@@ -7,12 +7,8 @@
 
 import Foundation
 
-// MARK: - For View Delegate
+protocol DashboardViewProtocol: AnyObject {}
 
-protocol DashboardView: AnyObject {}
-
-// MARK: - For Presenter Delegate
-
-protocol DashboardPresenter: AnyObject {
-    func viewAttach(view: DashboardView)
+protocol DashboardPresenterProtocol: AnyObject {
+    func viewAttach(view: DashboardViewProtocol)
 }

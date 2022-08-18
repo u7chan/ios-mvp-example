@@ -7,16 +7,14 @@
 
 import Foundation
 
-// MARK: - Presenter Implementation
-
-final class DashboardPresenterImpl {
-    private weak var view: DashboardView?
+final class DashboardPresenter {
+    private weak var view: DashboardViewProtocol?
 }
 
-// MARK: - DashboardPresenter Delegate
+// MARK: - DashboardPresenterProtocol
 
-extension DashboardPresenterImpl: DashboardPresenter {
-    func viewAttach(view: DashboardView) {
+extension DashboardPresenter: DashboardPresenterProtocol {
+    func viewAttach(view: DashboardViewProtocol) {
         self.view = view
     }
 }

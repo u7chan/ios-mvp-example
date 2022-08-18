@@ -7,12 +7,10 @@
 
 import UIKit
 
-// MARK: - UIViewController Implementation
-
 final class LoginViewController: UIViewController {
-    private let presenter: LoginPresenter
+    private let presenter: LoginPresenterProtocol
 
-    init(presenter: LoginPresenter) {
+    init(presenter: LoginPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: String(describing: LoginViewController.self), bundle: nil)
     }
@@ -32,9 +30,9 @@ final class LoginViewController: UIViewController {
     }
 }
 
-// MARK: - LoginView Delegate
+// MARK: - LoginViewProtocol
 
-extension LoginViewController: LoginView {
+extension LoginViewController: LoginViewProtocol {
     func navigateToDashboard() {
         self.present(VCModules.createDashboardViewController(), animated: false)
     }

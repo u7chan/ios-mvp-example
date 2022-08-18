@@ -8,9 +8,9 @@
 import UIKit
 
 final class DashboardViewController: UIViewController {
-    private let presenter: DashboardPresenter
+    private let presenter: DashboardPresenterProtocol
 
-    init(presenter: DashboardPresenter) {
+    init(presenter: DashboardPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: String(describing: DashboardViewController.self), bundle: nil)
     }
