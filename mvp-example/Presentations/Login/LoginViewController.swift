@@ -26,7 +26,7 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButton(_ sender: Any) {
-        self.presenter.doLogin()
+        self.presenter.doLogin(userName: "dummy", password: "hoge")
     }
 }
 
@@ -35,5 +35,13 @@ final class LoginViewController: UIViewController {
 extension LoginViewController: LoginViewProtocol {
     func navigateToDashboard() {
         self.present(VCModules.createDashboardViewController(), animated: false)
+    }
+
+    func showProgress() {
+        // TODO:
+    }
+
+    func hideProgress() {
+        // TODO:
     }
 }
