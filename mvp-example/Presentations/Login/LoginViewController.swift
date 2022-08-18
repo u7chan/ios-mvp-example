@@ -10,18 +10,18 @@ import UIKit
 // MARK: - UIViewController Implementation
 
 final class LoginViewController: UIViewController {
-    
     private let presenter: LoginPresenter
-    
+
     init(presenter: LoginPresenter) {
         self.presenter = presenter
         super.init(nibName: String(describing: LoginViewController.self), bundle: nil)
     }
-    
+
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.viewAttach(view: self)
@@ -35,7 +35,6 @@ final class LoginViewController: UIViewController {
 // MARK: - LoginView Delegate
 
 extension LoginViewController: LoginView {
-    
     func navigateToDashboard() {
         self.present(VCModules.createDashboardViewController(), animated: false)
     }

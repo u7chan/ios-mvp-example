@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class LoginApiFake { }
+final class LoginApiFake {}
 
 // MARK: - LoginApi
 

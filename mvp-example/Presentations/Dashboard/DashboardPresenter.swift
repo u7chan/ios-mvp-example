@@ -16,9 +16,7 @@ final class DashboardPresenterImpl {
 // MARK: - DashboardPresenter Delegate
 
 extension DashboardPresenterImpl: DashboardPresenter {
-    
     func viewAttach(view: DashboardView) {
         self.view = view
     }
 }
-

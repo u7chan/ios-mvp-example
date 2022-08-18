@@ -9,7 +9,7 @@ import Foundation
 
 final class UserRepositoryImpl {
     private let loginApi: LoginApi
-    
+
     init(loginApi: LoginApi) {
         self.loginApi = loginApi
     }
@@ -21,8 +21,6 @@ extension UserRepositoryImpl: UserRepository {
     func singin(userName: String, password: String) async throws {
         do {
             _ = try await self.loginApi.singin(params: LoginApiRequest(name: userName, password: password))
-        } catch {
-            
-        }
+        } catch {}
     }
 }

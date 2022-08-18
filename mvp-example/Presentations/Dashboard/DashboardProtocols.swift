@@ -9,9 +9,7 @@ import Foundation
 
 // MARK: - For View Delegate
 
-protocol DashboardView: AnyObject {
-    
-}
+protocol DashboardView: AnyObject {}
 
 // MARK: - For Presenter Delegate
 
