@@ -9,6 +9,7 @@ import Foundation
 
 final class LoginPresenter {
     private weak var view: LoginViewProtocol?
+
     private let loginUsecase: LoginUsecaseProtocol
 
     init(loginUsecase: LoginUsecaseProtocol) {
@@ -19,22 +20,20 @@ final class LoginPresenter {
 // MARK: - LoginPresenterProtocol
 
 extension LoginPresenter: LoginPresenterProtocol {
-    func viewAttach(view: LoginViewProtocol) {
+    func attachView(view: LoginViewProtocol) {
         self.view = view
     }
 
     func doLogin(userName: String, password: String) {
-        guard let view = self.view else { return }
-
-        view.showProgress()
+        self.view?.showProgress()
 
         runCatch {
             try await self.loginUsecase.invoke(userName: userName, password: password)
         } success: {
-            view.hideProgress()
-            view.navigateToDashboard()
+            self.view?.hideProgress()
+            self.view?.navigateToDashboard()
         } failure: { error in
-            view.hideProgress()
+            self.view?.hideProgress()
         }
     }
 }

@@ -24,4 +24,9 @@ final class DashboardViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
+    @IBAction func buttonTapped(_ sender: Any) {
+        //
+        self.present(VCModules.createLoginViewController(), animated: true)
+    }
 }

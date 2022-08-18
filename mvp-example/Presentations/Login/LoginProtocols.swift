@@ -8,12 +8,12 @@
 import Foundation
 
 protocol LoginViewProtocol: AnyObject {
-    func navigateToDashboard()
     func showProgress()
     func hideProgress()
+    func navigateToDashboard()
 }
 
 protocol LoginPresenterProtocol: AnyObject {
-    func viewAttach(view: LoginViewProtocol)
+    func attachView(view: LoginViewProtocol)
     func doLogin(userName: String, password: String)
 }

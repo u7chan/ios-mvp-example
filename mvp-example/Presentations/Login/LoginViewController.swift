@@ -22,7 +22,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.viewAttach(view: self)
+        self.presenter.attachView(view: self)
     }
 
     @IBAction func loginButton(_ sender: Any) {
@@ -33,15 +33,15 @@ final class LoginViewController: UIViewController {
 // MARK: - LoginViewProtocol
 
 extension LoginViewController: LoginViewProtocol {
-    func navigateToDashboard() {
-        self.present(VCModules.createDashboardViewController(), animated: false)
-    }
-
     func showProgress() {
         // TODO:
     }
 
     func hideProgress() {
         // TODO:
+    }
+
+    func navigateToDashboard() {
+        self.present(VCModules.createDashboardViewController(), animated: false)
     }
 }
