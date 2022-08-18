@@ -26,7 +26,6 @@ extension LoginPresenter: LoginPresenterProtocol {
 
     func doLogin(userName: String, password: String) {
         self.view?.showProgress()
-
         runCatch {
             try await self.loginUsecase.invoke(userName: userName, password: password)
         } success: {
