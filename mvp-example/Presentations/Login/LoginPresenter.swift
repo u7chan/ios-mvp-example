@@ -10,10 +10,10 @@ import Foundation
 final class LoginPresenter {
     private weak var view: LoginViewProtocol?
 
-    private let loginUsecase: LoginUsecaseProtocol
+    private let loginUseCase: LoginUseCaseProtocol
 
-    init(loginUsecase: LoginUsecaseProtocol) {
-        self.loginUsecase = loginUsecase
+    init(loginUseCase: LoginUseCaseProtocol) {
+        self.loginUseCase = loginUseCase
     }
 }
 
@@ -27,7 +27,7 @@ extension LoginPresenter: LoginPresenterProtocol {
     func doLogin(userName: String, password: String) {
         self.view?.showProgress()
         runCatch {
-            try await self.loginUsecase.invoke(userName: userName, password: password)
+            try await self.loginUseCase.invoke(userName: userName, password: password)
         } success: {
             self.view?.hideProgress()
             self.view?.navigateToDashboard()

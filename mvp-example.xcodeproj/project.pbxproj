@@ -31,8 +31,8 @@
 		AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32328AE773C00FBC729 /* LoginApiFake.swift */; };
 		AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */; };
 		AC94C32928AE7F6600FBC729 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32828AE7F6600FBC729 /* User.swift */; };
-		AC94C32C28AE825100FBC729 /* LoginUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */; };
-		AC94C32E28AE83A500FBC729 /* LoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */; };
+		AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */; };
+		AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */; };
 		AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33028AE8AB600FBC729 /* RunCatch.swift */; };
 		AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */; };
 		AC94C33728AFEC6200FBC729 /* ApiModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33628AFEC6200FBC729 /* ApiModules.swift */; };
@@ -90,8 +90,8 @@
 		AC94C32328AE773C00FBC729 /* LoginApiFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiFake.swift; sourceTree = "<group>"; };
 		AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleepMillis.swift"; sourceTree = "<group>"; };
 		AC94C32828AE7F6600FBC729 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecaseProtocol.swift; sourceTree = "<group>"; };
-		AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecase.swift; sourceTree = "<group>"; };
+		AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseProtocol.swift; sourceTree = "<group>"; };
+		AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		AC94C33028AE8AB600FBC729 /* RunCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCatch.swift; sourceTree = "<group>"; };
 		AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		AC94C33628AFEC6200FBC729 /* ApiModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModules.swift; sourceTree = "<group>"; };
@@ -260,8 +260,8 @@
 		AC94C32A28AE821000FBC729 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */,
-				AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */,
+				AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */,
+				AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -480,10 +480,10 @@
 				AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
 				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
-				AC94C32E28AE83A500FBC729 /* LoginUsecase.swift in Sources */,
+				AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
-				AC94C32C28AE825100FBC729 /* LoginUsecaseProtocol.swift in Sources */,
+				AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */,
 				AC94C31F28AE74C200FBC729 /* DbError.swift in Sources */,
 				AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */,
 				AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */,

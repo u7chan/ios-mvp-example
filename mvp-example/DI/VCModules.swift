@@ -11,8 +11,8 @@ struct VCModules {
     static func createLoginViewController() -> UIViewController {
         let api = LoginApiFake() // TODO: Use Fake
         let repository = UserRepository(loginApi: api)
-        let usecase = LoginUsecase(userRepository: repository)
-        let presenter = LoginPresenter(loginUsecase: usecase)
+        let UseCase = LoginUseCase(userRepository: repository)
+        let presenter = LoginPresenter(loginUseCase: UseCase)
         let vc = LoginViewController(presenter: presenter)
         vc.modalPresentationStyle = .fullScreen
         return vc

@@ -8,11 +8,11 @@
 import Foundation
 
 struct UseCaseModules {
-    let loginUsecase: LoginUsecaseProtocol
+    let loginUseCase: LoginUseCaseProtocol
 
     static func inject(depsModules: ReopositoryModules) -> UseCaseModules {
         UseCaseModules(
-            loginUsecase: LoginUsecase(userRepository: depsModules.userRepository)
+            loginUseCase: LoginUseCase(userRepository: depsModules.userRepository)
         )
     }
 }
