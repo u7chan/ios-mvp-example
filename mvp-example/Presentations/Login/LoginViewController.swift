@@ -46,6 +46,6 @@ extension LoginViewController: LoginViewProtocol {
     }
 
     func navigateToDashboard() {
-        self.present(VCModules.createDashboardViewController(), animated: false)
+        self.present(VCFactory.createDashboardViewController(), animated: false)
     }
 }

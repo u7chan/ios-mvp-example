@@ -10,6 +10,6 @@ import UIKit
 struct Entrypoint {
     static func getFirstViewController() -> UIViewController {
         let loggedIn = false // TODO: feat
-        return loggedIn ? VCModules.createDashboardViewController() : VCModules.createLoginViewController()
+        return loggedIn ? VCFactory.createDashboardViewController() : VCFactory.createLoginViewController()
     }
 }

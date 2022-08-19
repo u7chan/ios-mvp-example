@@ -1,5 +1,5 @@
 //
-//  VCModules.swift
+//  VCFactory.swift
 //  mvp-example
 //
 //  Created by unagami on 2022/08/17.
@@ -7,12 +7,9 @@
 
 import UIKit
 
-struct VCModules {
+struct VCFactory {
     static func createLoginViewController() -> UIViewController {
-        let api = LoginApiFake() // TODO: Use Fake
-        let repository = UserRepository(loginApi: api)
-        let UseCase = LoginUseCase(userRepository: repository)
-        let presenter = LoginPresenter(loginUseCase: UseCase)
+        let presenter = LoginPresenter(loginUseCase: SingletonContainer.shared.useCaseModules.loginUseCase)
         let vc = LoginViewController(presenter: presenter)
         vc.modalPresentationStyle = .fullScreen
         return vc

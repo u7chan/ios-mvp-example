@@ -19,7 +19,7 @@
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
 		AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30828ACBD5F00FBC729 /* DashboardProtocols.swift */; };
-		AC94C30C28ACBE3600FBC729 /* VCModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30B28ACBE3600FBC729 /* VCModules.swift */; };
+		AC94C30C28ACBE3600FBC729 /* VCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30B28ACBE3600FBC729 /* VCFactory.swift */; };
 		AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */; };
 		AC94C31228AE70F800FBC729 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31128AE70F800FBC729 /* UserRepository.swift */; };
 		AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31528AE722900FBC729 /* LoginApiProtocol.swift */; };
@@ -38,6 +38,8 @@
 		AC94C33728AFEC6200FBC729 /* ApiModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33628AFEC6200FBC729 /* ApiModules.swift */; };
 		AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33828AFEC7B00FBC729 /* ReopositoryModules.swift */; };
 		AC94C33B28AFECED00FBC729 /* UseCaseModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */; };
+		AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */; };
+		AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -78,7 +80,7 @@
 		AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		AC94C30828ACBD5F00FBC729 /* DashboardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardProtocols.swift; sourceTree = "<group>"; };
-		AC94C30B28ACBE3600FBC729 /* VCModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCModules.swift; sourceTree = "<group>"; };
+		AC94C30B28ACBE3600FBC729 /* VCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactory.swift; sourceTree = "<group>"; };
 		AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AC94C31128AE70F800FBC729 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		AC94C31528AE722900FBC729 /* LoginApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiProtocol.swift; sourceTree = "<group>"; };
@@ -97,6 +99,8 @@
 		AC94C33628AFEC6200FBC729 /* ApiModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModules.swift; sourceTree = "<group>"; };
 		AC94C33828AFEC7B00FBC729 /* ReopositoryModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReopositoryModules.swift; sourceTree = "<group>"; };
 		AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseModules.swift; sourceTree = "<group>"; };
+		AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterModules.swift; sourceTree = "<group>"; };
+		AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonContainer.swift; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +195,9 @@
 				AC94C33628AFEC6200FBC729 /* ApiModules.swift */,
 				AC94C33828AFEC7B00FBC729 /* ReopositoryModules.swift */,
 				AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */,
-				AC94C30B28ACBE3600FBC729 /* VCModules.swift */,
+				AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */,
+				AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */,
+				AC94C30B28ACBE3600FBC729 /* VCFactory.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -467,7 +473,7 @@
 			files = (
 				AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */,
 				AC94C33B28AFECED00FBC729 /* UseCaseModules.swift in Sources */,
-				AC94C30C28ACBE3600FBC729 /* VCModules.swift in Sources */,
+				AC94C30C28ACBE3600FBC729 /* VCFactory.swift in Sources */,
 				ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */,
 				AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */,
 				AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */,
@@ -475,6 +481,7 @@
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
 				AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */,
+				AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */,
 				AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */,
 				AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */,
 				AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */,
@@ -483,6 +490,7 @@
 				AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
+				AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */,
 				AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */,
 				AC94C31F28AE74C200FBC729 /* DbError.swift in Sources */,
 				AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */,
