@@ -41,6 +41,10 @@ extension LoginViewController: LoginViewProtocol {
         // TODO:
     }
 
+    func showError(message: String) {
+        self.showAlert(title: message, message: "", positiveTitle: "OK")
+    }
+
     func navigateToDashboard() {
         self.present(VCModules.createDashboardViewController(), animated: false)
     }

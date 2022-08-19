@@ -14,6 +14,7 @@ final class LoginApiFake {}
 extension LoginApiFake: LoginApiProtocol {
     func singin(params: LoginApiRequest) async throws -> LoginApiResponse {
         await Task.sleepMillis(millis: 1000)
+        // throw ApiError.networkUnableError
         return LoginApiResponse(userId: 1, name: "FakeMan", expireAt: "12345")
     }
 }

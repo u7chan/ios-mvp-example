@@ -33,6 +33,12 @@ extension LoginPresenter: LoginPresenterProtocol {
             self.view?.navigateToDashboard()
         } failure: { error in
             self.view?.hideProgress()
+            switch error {
+            case ApiError.networkUnableError:
+                self.view?.showError(message: "ネットワークに接続できませんでした")
+            default:
+                self.view?.showError(message: "予期せぬエラーが発生しました")
+            }
         }
     }
 }

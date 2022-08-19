@@ -10,6 +10,7 @@ import Foundation
 protocol LoginViewProtocol: AnyObject {
     func showProgress()
     func hideProgress()
+    func showError(message: String)
     func navigateToDashboard()
 }
 

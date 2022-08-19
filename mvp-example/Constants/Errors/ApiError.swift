@@ -12,4 +12,5 @@ enum ApiError: Error {
     case serverError
     case authorizationError
     case badRequestError
+    case parseError
 }

@@ -18,10 +18,6 @@ final class LoginUsecase {
 
 extension LoginUsecase: LoginUsecaseProtocol {
     func invoke(userName: String, password: String) async throws {
-        do {
-            try await self.userRepository.singin(userName: userName, password: password)
-        } catch {
-            // TODO
-        }
+        try await self.userRepository.singin(userName: userName, password: password)
     }
 }

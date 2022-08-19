@@ -25,6 +25,7 @@ internal func runCatch(
                 }
             }
         } catch {
+            print("[ERROR]: \(error)") // TODO: feature logging
             if let failure = failure {
                 DispatchQueue.main.async {
                     failure(error)

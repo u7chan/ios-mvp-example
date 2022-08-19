@@ -26,7 +26,7 @@
 		AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31828AE728F00FBC729 /* LoginApiRequest.swift */; };
 		AC94C31B28AE737E00FBC729 /* LoginApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31A28AE737E00FBC729 /* LoginApiResponse.swift */; };
 		AC94C31D28AE74B000FBC729 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31C28AE74B000FBC729 /* ApiError.swift */; };
-		AC94C31F28AE74C200FBC729 /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31E28AE74C200FBC729 /* ViewError.swift */; };
+		AC94C31F28AE74C200FBC729 /* DbError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C31E28AE74C200FBC729 /* DbError.swift */; };
 		AC94C32128AE74DA00FBC729 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32028AE74DA00FBC729 /* DomainError.swift */; };
 		AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32328AE773C00FBC729 /* LoginApiFake.swift */; };
 		AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */; };
@@ -34,6 +34,7 @@
 		AC94C32C28AE825100FBC729 /* LoginUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */; };
 		AC94C32E28AE83A500FBC729 /* LoginUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */; };
 		AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33028AE8AB600FBC729 /* RunCatch.swift */; };
+		AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -81,7 +82,7 @@
 		AC94C31828AE728F00FBC729 /* LoginApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiRequest.swift; sourceTree = "<group>"; };
 		AC94C31A28AE737E00FBC729 /* LoginApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiResponse.swift; sourceTree = "<group>"; };
 		AC94C31C28AE74B000FBC729 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		AC94C31E28AE74C200FBC729 /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
+		AC94C31E28AE74C200FBC729 /* DbError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbError.swift; sourceTree = "<group>"; };
 		AC94C32028AE74DA00FBC729 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		AC94C32328AE773C00FBC729 /* LoginApiFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiFake.swift; sourceTree = "<group>"; };
 		AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleepMillis.swift"; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		AC94C32B28AE825100FBC729 /* LoginUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecaseProtocol.swift; sourceTree = "<group>"; };
 		AC94C32D28AE83A500FBC729 /* LoginUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUsecase.swift; sourceTree = "<group>"; };
 		AC94C33028AE8AB600FBC729 /* RunCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCatch.swift; sourceTree = "<group>"; };
+		AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */,
+				AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,9 +233,9 @@
 		AC94C32228AE750F00FBC729 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				AC94C31E28AE74C200FBC729 /* DbError.swift */,
 				AC94C31C28AE74B000FBC729 /* ApiError.swift */,
 				AC94C32028AE74DA00FBC729 /* DomainError.swift */,
-				AC94C31E28AE74C200FBC729 /* ViewError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				AC94C30C28ACBE3600FBC729 /* VCModules.swift in Sources */,
 				ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */,
 				AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */,
+				AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */,
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
@@ -469,7 +473,7 @@
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
 				AC94C32C28AE825100FBC729 /* LoginUsecaseProtocol.swift in Sources */,
-				AC94C31F28AE74C200FBC729 /* ViewError.swift in Sources */,
+				AC94C31F28AE74C200FBC729 /* DbError.swift in Sources */,
 				AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */,
 				AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */,
 				AC94C31D28AE74B000FBC729 /* ApiError.swift in Sources */,
