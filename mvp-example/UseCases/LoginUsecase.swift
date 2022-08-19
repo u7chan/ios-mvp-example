@@ -14,7 +14,7 @@ final class LoginUseCase {
     }
 }
 
-// MARK: - LoginUseCaseProtocol
+// MARK: - LoginUsecaseProtocol
 
 extension LoginUseCase: LoginUseCaseProtocol {
     func invoke(userName: String, password: String) async throws {
