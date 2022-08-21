@@ -40,6 +40,7 @@
 		AC94C33B28AFECED00FBC729 /* UseCaseModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */; };
 		AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */; };
 		AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */; };
+		ACBCF08828B274620076AEEF /* UIViewController+showProgressAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -101,6 +102,7 @@
 		AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseModules.swift; sourceTree = "<group>"; };
 		AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterModules.swift; sourceTree = "<group>"; };
 		AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonContainer.swift; sourceTree = "<group>"; };
+		ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showProgressAlert.swift"; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */,
 				AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */,
+				ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +358,8 @@
 			dependencies = (
 			);
 			name = "mvp-example";
+			packageProductDependencies = (
+			);
 			productName = "mvp-example";
 			productReference = AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */;
 			productType = "com.apple.product-type.application";
@@ -427,6 +432,8 @@
 				Base,
 			);
 			mainGroup = AC44B8A128ABE45500FAD6F7;
+			packageReferences = (
+			);
 			productRefGroup = AC44B8AB28ABE45500FAD6F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -501,6 +508,7 @@
 				AC94C32128AE74DA00FBC729 /* DomainError.swift in Sources */,
 				AC94C31B28AE737E00FBC729 /* LoginApiResponse.swift in Sources */,
 				AC94C32928AE7F6600FBC729 /* User.swift in Sources */,
+				ACBCF08828B274620076AEEF /* UIViewController+showProgressAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

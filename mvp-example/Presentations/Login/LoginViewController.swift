@@ -34,11 +34,11 @@ final class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func showProgress() {
-        // TODO:
+        self.showProgressAlert()
     }
 
     func hideProgress() {
-        // TODO:
+        self.dismiss(animated: true)
     }
 
     func showError(message: String) {
