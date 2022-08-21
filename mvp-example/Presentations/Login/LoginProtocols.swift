@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// @mockable(typealias: T = AnyObject; U = StringProtocol)
 protocol LoginViewProtocol: AnyObject {
     func showProgress()
     func hideProgress()

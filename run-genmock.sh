@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TARGET=$SRCROOT
+TARGET=$1
 DST_FILE_NAME="OutputMocks.swift"
 
 if [ -z "$TARGET" ]; then

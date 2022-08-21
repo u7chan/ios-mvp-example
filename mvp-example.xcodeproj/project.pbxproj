@@ -43,6 +43,7 @@
 		ACBCF08828B274620076AEEF /* UIViewController+showProgressAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */; };
 		ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */; };
 		ACBCF08F28B281BE0076AEEF /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */; };
+		ACEDE2DE28B2918D003487BF /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDE2DD28B2918D003487BF /* Env.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -107,6 +108,7 @@
 		ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showProgressAlert.swift"; sourceTree = "<group>"; };
 		ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
+		ACEDE2DD28B2918D003487BF /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		AC94C32F28AE8AA300FBC729 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ACEDE2DD28B2918D003487BF /* Env.swift */,
 				AC94C33028AE8AB600FBC729 /* RunCatch.swift */,
 			);
 			path = Utils;
@@ -505,6 +508,7 @@
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
 				AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */,
 				AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */,
+				ACEDE2DE28B2918D003487BF /* Env.swift in Sources */,
 				AC94C31F28AE74C200FBC729 /* DbError.swift in Sources */,
 				AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */,
 				AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */,

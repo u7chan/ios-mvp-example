@@ -20,13 +20,23 @@ internal func runCatch(
         do {
             try await closure()
             if let success = success {
+                if isTesting() {
+                    success()
+                    return
+                }
                 DispatchQueue.main.async {
                     success()
                 }
             }
         } catch {
-            print("[ERROR]: \(error)") // TODO: feature logging
+            if !isTesting() {
+                print("[ERROR]: \(error)") // TODO: feature logging
+            }
             if let failure = failure {
+                if isTesting() {
+                    failure(error)
+                    return
+                }
                 DispatchQueue.main.async {
                     failure(error)
                 }
