@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// @mockable(typealias: T = AnyObject; U = StringProtocol)
 protocol LoginApiProtocol: AnyObject {
     func singin(params: LoginApiRequest) async throws -> LoginApiResponse
 }

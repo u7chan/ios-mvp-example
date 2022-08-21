@@ -41,6 +41,8 @@
 		AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */; };
 		AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */; };
 		ACBCF08828B274620076AEEF /* UIViewController+showProgressAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */; };
+		ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */; };
+		ACBCF08F28B281BE0076AEEF /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -103,6 +105,8 @@
 		AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterModules.swift; sourceTree = "<group>"; };
 		AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonContainer.swift; sourceTree = "<group>"; };
 		ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showProgressAlert.swift"; sourceTree = "<group>"; };
+		ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
+		ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				AC94C32A28AE821000FBC729 /* UseCases */,
 				AC94C30A28ACBE0000FBC729 /* DI */,
 				ACEFA54328ABF35A00B7355A /* Presentations */,
+				ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */,
 				AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */,
 				AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */,
 				AC44B8B628ABE45800FAD6F7 /* Assets.xcassets */,
@@ -317,6 +322,7 @@
 			children = (
 				AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */,
 				AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */,
+				ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */,
 				ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */,
 				ACEFA54D28ABF4C300B7355A /* LoginViewController.xib */,
 			);
@@ -504,6 +510,7 @@
 				AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */,
 				AC94C31D28AE74B000FBC729 /* ApiError.swift in Sources */,
 				AC94C31228AE70F800FBC729 /* UserRepository.swift in Sources */,
+				ACBCF08F28B281BE0076AEEF /* OutputMocks.swift in Sources */,
 				AC94C33728AFEC6200FBC729 /* ApiModules.swift in Sources */,
 				AC94C32128AE74DA00FBC729 /* DomainError.swift in Sources */,
 				AC94C31B28AE737E00FBC729 /* LoginApiResponse.swift in Sources */,
@@ -516,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
 				AC44B8C528ABE45900FAD6F7 /* mvp_exampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
