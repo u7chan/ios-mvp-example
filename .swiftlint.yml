@@ -1,0 +1,53 @@
+# reporter type (xcode、json、csv、checkstyle、junit)
+reporter: 'xcode'
+
+# -----------------------------------------------
+# Lintの対象外にするファイル
+# -----------------------------------------------
+excluded:
+  - Pods/
+  - Carthage/
+  - SourcePackages/
+  - Generated/
+  - '*/OutputMocks.swift'
+
+analyzer_rules: # Rules run by `swiftlint analyze`
+  - explicit_self
+  - unused_declaration
+  - unused_import
+
+# -----------------------------------------------
+# デフォルトで無効のルールを有効にする
+# -----------------------------------------------
+opt_in_rules:
+  - sorted_imports # importのソートを検出する
+  - empty_count # isEmptyで書けるコードを検出する
+  - private_action # IBActionsの非privateを検出する
+  - private_outlet # IBOutletsの非privateを検出する
+  - missing_docs # public宣言は非Docコメント記述を検出する
+  - force_unwrapping # 強制アンラップを検出する(IBOutletは対象外)
+  - multiline_arguments # 引数は全て同じ行であるか、分けるなら引数毎に1行で改行されているかを検出する（呼出側）
+  - multiline_parameters # 引数は全て同じ行であるか、分けるなら引数毎に1行で改行されているかを検出する（定義側）
+  - prefixed_toplevel_constant # トップレベルの定数でk始まりではないものを検出する
+
+# -----------------------------------------------
+# 無効にルールする
+# -----------------------------------------------
+disabled_rules:
+  - explicit_type_interface # 型推論を許可する
+
+# -----------------------------------------------
+# ルールのカスタム
+# -----------------------------------------------
+line_length: 200
+identifier_name:
+  allowed_symbols: '_'
+  min_length:
+    error: 3
+    warning: 3
+  excluded:
+    - id
+    - i
+    - j
+    - n
+    - vc
