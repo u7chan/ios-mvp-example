@@ -27,8 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "NO"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      codeCoverageEnabled = "YES">
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "RUN_ENV"
@@ -53,16 +52,6 @@
                BlueprintIdentifier = "AC44B8BF28ABE45900FAD6F7"
                BuildableName = "mvp-exampleTests.xctest"
                BlueprintName = "mvp-exampleTests"
-               ReferencedContainer = "container:mvp-example.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AC44B8C928ABE45900FAD6F7"
-               BuildableName = "mvp-exampleUITests.xctest"
-               BlueprintName = "mvp-exampleUITests"
                ReferencedContainer = "container:mvp-example.xcodeproj">
             </BuildableReference>
          </TestableReference>

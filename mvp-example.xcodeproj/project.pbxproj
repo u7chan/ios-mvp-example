@@ -337,6 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC44B8D728ABE45900FAD6F7 /* Build configuration list for PBXNativeTarget "mvp-exampleTests" */;
 			buildPhases = (
+				AC013B2B28B3D84C00BC6B9E /* ShellScript */,
 				AC44B8BC28ABE45900FAD6F7 /* Sources */,
 				AC44B8BD28ABE45900FAD6F7 /* Frameworks */,
 				AC44B8BE28ABE45900FAD6F7 /* Resources */,
@@ -429,6 +430,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./run-lint.sh\n";
+		};
+		AC013B2B28B3D84C00BC6B9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./run-genmock.sh $PROJECT\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
