@@ -446,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./run-genmock.sh $PROJECT\n";
+			shellScript = "./run-genmock.sh $PROJECT\n./run-format.sh $PROJECT\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
