@@ -12,7 +12,6 @@
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
 		AC44B8B728ABE45800FAD6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC44B8B628ABE45800FAD6F7 /* Assets.xcassets */; };
 		AC44B8BA28ABE45800FAD6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC44B8B828ABE45800FAD6F7 /* LaunchScreen.storyboard */; };
-		AC44B8C528ABE45900FAD6F7 /* mvp_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8C428ABE45900FAD6F7 /* mvp_exampleTests.swift */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
@@ -67,7 +66,6 @@
 		AC44B8B928ABE45800FAD6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC44B8BB28ABE45800FAD6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC44B8C028ABE45900FAD6F7 /* mvp-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvp-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC44B8C428ABE45900FAD6F7 /* mvp_exampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvp_exampleTests.swift; sourceTree = "<group>"; };
 		AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				AC44B8AC28ABE45500FAD6F7 /* mvp-example */,
-				AC44B8C328ABE45900FAD6F7 /* mvp-exampleTests */,
 				AC44B8AB28ABE45500FAD6F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,14 +155,6 @@
 				AC44B8BB28ABE45800FAD6F7 /* Info.plist */,
 			);
 			path = "mvp-example";
-			sourceTree = "<group>";
-		};
-		AC44B8C328ABE45900FAD6F7 /* mvp-exampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				AC44B8C428ABE45900FAD6F7 /* mvp_exampleTests.swift */,
-			);
-			path = "mvp-exampleTests";
 			sourceTree = "<group>";
 		};
 		AC94C30A28ACBE0000FBC729 /* DI */ = {
@@ -329,6 +318,7 @@
 			buildConfigurationList = AC44B8D428ABE45900FAD6F7 /* Build configuration list for PBXNativeTarget "mvp-example" */;
 			buildPhases = (
 				AC44B8A628ABE45500FAD6F7 /* Sources */,
+				AC013B2A28B3CAEF00BC6B9E /* ShellScript */,
 				AC44B8A728ABE45500FAD6F7 /* Frameworks */,
 				AC44B8A828ABE45500FAD6F7 /* Resources */,
 			);
@@ -422,6 +412,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AC013B2A28B3CAEF00BC6B9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./run-lint.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC44B8A628ABE45500FAD6F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -468,7 +478,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
-				AC44B8C528ABE45900FAD6F7 /* mvp_exampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
