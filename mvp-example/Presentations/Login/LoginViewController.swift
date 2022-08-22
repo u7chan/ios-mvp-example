@@ -25,7 +25,7 @@ final class LoginViewController: UIViewController {
         self.presenter.attachView(view: self)
     }
 
-    @IBAction func loginButton(_ sender: Any) {
+    @IBAction private func loginButton(_ sender: Any) {
         self.presenter.doLogin(userName: "dummy", password: "hoge")
     }
 }

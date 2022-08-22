@@ -59,7 +59,7 @@ final class LoginPresenterTest: XCTestCase {
     func test_ログイン処理_異常系_unknownError() throws {
         let exp = expectation(description: "TimeOut")
 
-        self.useCaseMock.invokeHandler = { (userName, password) in
+        self.useCaseMock.invokeHandler = { _ in
             exp.fulfill()
             throw NSError(domain: "Test", code: -1) // unknownError
         }
@@ -86,7 +86,7 @@ final class LoginPresenterTest: XCTestCase {
     func test_ログイン処理_異常系_networkUnableError() throws {
         let exp = expectation(description: "TimeOut")
 
-        self.useCaseMock.invokeHandler = { (userName, password) in
+        self.useCaseMock.invokeHandler = { _ in
             exp.fulfill()
             throw ApiError.networkUnableError
         }
