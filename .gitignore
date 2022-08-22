@@ -91,3 +91,6 @@ iOSInjectionProject/
 
 # Generated Mock
 */OutputMocks.swift
+
+# UnitTest Report
+test-results.html
