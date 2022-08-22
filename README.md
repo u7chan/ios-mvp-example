@@ -22,11 +22,11 @@ MVP + UseCase + Repository
 | [realm/SwiftLint](https://github.com/realm/SwiftLint)                   | 静的解析                 | Mint     | Main Targets の Run Script で実行時 |
 | [xcpetty/xcpretty](https://github.com/xcpretty/xcpretty)                | ビルドログフォーマッター | gem      | run-test.sh 実行時                  |
 
-## Mint 用モジュールのインストール
+1. Mint モジュールのインストール
 
-```sh
-% ./run-mint-install.sh
-```
+   ```sh
+   % ./run-mint-install.sh
+   ```
 
 ## Run unit test for CLI
 
