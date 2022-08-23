@@ -8,7 +8,7 @@
 
 MVP + UseCase + Repository
 
-## 環境
+## 開発環境
 
 - OS: macOS Monterey 12.5.1
 - Xcode: 13.4.1
@@ -27,6 +27,12 @@ MVP + UseCase + Repository
    ```sh
    % ./run-mint-install.sh
    ```
+
+## 利用パッケージ
+
+| 項目                                          | 概要                     | ライセンス  |
+| --------------------------------------------- | ------------------------ | ----------- |
+| [pkluz/PKHUD](https://github.com/pkluz/PKHUD) | Swift 製のインジケーター | MIT License |
 
 ## Run unit test for CLI
 
