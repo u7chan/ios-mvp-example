@@ -20,6 +20,6 @@ extension LoginUseCase: LoginUseCaseProtocol {
     func invoke(userName: String, password: String) async throws {
         try LoginValidator.validateUserName(userName: userName)
         try LoginValidator.validatePassword(password: password)
-        try await self.userRepository.singin(userName: userName, password: password)
+        try await self.userRepository.authenticate(userName: userName, password: password)
     }
 }

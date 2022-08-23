@@ -19,7 +19,7 @@ final class UserRepository {
 // MARK: - UserRepositoryProtocol
 
 extension UserRepository: UserRepositoryProtocol {
-    func singin(userName: String, password: String) async throws {
+    func authenticate(userName: String, password: String) async throws {
         let result = try await self.loginApi.singin(params: LoginApiRequest(name: userName, password: password))
         self.singedInUser = User(id: result.userId, name: result.name, expireAt: result.expireAt)
     }
