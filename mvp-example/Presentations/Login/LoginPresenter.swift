@@ -36,6 +36,8 @@ extension LoginPresenter: LoginPresenterProtocol {
             switch error {
             case ApiError.networkUnableError:
                 self.view?.showError(message: "ネットワークに接続できませんでした")
+            case let DomainError.validationError(reason):
+                self.view?.showError(message: reason)
             default:
                 self.view?.showError(message: "予期せぬエラーが発生しました")
             }

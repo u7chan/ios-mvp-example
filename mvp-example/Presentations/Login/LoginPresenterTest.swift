@@ -109,4 +109,31 @@ final class LoginPresenterTest: XCTestCase {
             XCTAssertEqual(1, self.viewMock.showErrorCallCount)
         }
     }
+
+    func test_ログイン処理_異常系_validationError() throws {
+        let exp = expectation(description: "TimeOut")
+
+        self.useCaseMock.invokeHandler = { (_, _) in
+            exp.fulfill()
+            throw DomainError.validationError(reason: "#invalid")
+        }
+
+        XCTContext.runActivity(named: "エラー表示の文言を検証") { _ in
+            self.viewMock.showErrorHandler = { (message) in
+                XCTAssertEqual("#invalid", message)
+            }
+        }
+
+        self.presenter.doLogin(userName: "", password: "")
+
+        wait(for: [exp], timeout: 5.0)
+
+        XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
+            XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
+        }
+
+        XCTContext.runActivity(named: "エラー表示の呼び出しを検証") { _ in
+            XCTAssertEqual(1, self.viewMock.showErrorCallCount)
+        }
+    }
 }
