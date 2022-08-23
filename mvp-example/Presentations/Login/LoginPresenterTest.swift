@@ -20,10 +20,6 @@ final class LoginPresenterTest: XCTestCase {
         self.presenter.attachView(view: viewMock)
     }
 
-    override func tearDownWithError() throws {
-        // NOP
-    }
-
     func test_ログイン処理_正常系() throws {
         let exp = expectation(description: "TimeOut")
 

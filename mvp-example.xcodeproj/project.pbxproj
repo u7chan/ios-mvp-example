@@ -17,6 +17,8 @@
 		AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */; };
 		AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1E428B5209900106F30 /* ProgressHUD.swift */; };
 		AC59B1E828B520EE00106F30 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AC59B1E728B520EE00106F30 /* PKHUD */; };
+		AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */; };
+		AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
@@ -75,6 +77,8 @@
 		AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorTest.swift; sourceTree = "<group>"; };
 		AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+Error.swift"; sourceTree = "<group>"; };
 		AC59B1E428B5209900106F30 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTest.swift; sourceTree = "<group>"; };
+		AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+runAsyncTest.swift"; sourceTree = "<group>"; };
 		AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -208,9 +212,10 @@
 			isa = PBXGroup;
 			children = (
 				AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */,
+				AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */,
+				AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */,
 				AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */,
 				ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */,
-				AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			children = (
 				AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */,
 				AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */,
+				AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -531,6 +537,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */,
+				AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */,
+				AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */,
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
