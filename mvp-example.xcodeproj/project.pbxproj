@@ -12,6 +12,9 @@
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
 		AC44B8B728ABE45800FAD6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC44B8B628ABE45800FAD6F7 /* Assets.xcassets */; };
 		AC44B8BA28ABE45800FAD6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC44B8B828ABE45800FAD6F7 /* LaunchScreen.storyboard */; };
+		AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D728B50EEA00106F30 /* LoginValidator.swift */; };
+		AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */; };
+		AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
@@ -66,6 +69,9 @@
 		AC44B8B928ABE45800FAD6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC44B8BB28ABE45800FAD6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC44B8C028ABE45900FAD6F7 /* mvp-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvp-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC59B1D728B50EEA00106F30 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
+		AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorTest.swift; sourceTree = "<group>"; };
+		AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+Error.swift"; sourceTree = "<group>"; };
 		AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 				AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */,
 				AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */,
 				ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */,
+				AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,11 +203,13 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		AC94C31428AE71E100FBC729 /* Storage */ = {
+		AC94C31428AE71E100FBC729 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
+				AC59B1D728B50EEA00106F30 /* LoginValidator.swift */,
+				AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */,
 			);
-			path = Storage;
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		AC94C31728AE726800FBC729 /* Login */ = {
@@ -272,8 +281,8 @@
 		ACEFA54528ABF38C00B7355A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC94C31428AE71E100FBC729 /* Validator */,
 				AC94C32728AE7F5700FBC729 /* Entity */,
-				AC94C31428AE71E100FBC729 /* Storage */,
 				AC94C31328AE71DC00FBC729 /* Api */,
 			);
 			path = Model;
@@ -464,9 +473,11 @@
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
+				AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */,
 				AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */,
 				AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */,
 				AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */,
+				AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */,
 				AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */,
 				AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
@@ -495,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */,
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

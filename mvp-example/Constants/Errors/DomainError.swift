@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum DomainError: Error {
-    case validationError
+enum DomainError: Error, Equatable {
+    case validationError(reason: String)
 }

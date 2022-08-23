@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum DbError: Error {
+enum DbError: Error, Equatable {
     case unableToOpenError
 }

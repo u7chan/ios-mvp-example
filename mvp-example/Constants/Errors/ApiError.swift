@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ApiError: Error {
+enum ApiError: Error, Equatable {
     case networkUnableError
     case timeoutError
     case serverError
