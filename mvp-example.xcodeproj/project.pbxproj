@@ -15,6 +15,8 @@
 		AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D728B50EEA00106F30 /* LoginValidator.swift */; };
 		AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */; };
 		AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */; };
+		AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1E428B5209900106F30 /* ProgressHUD.swift */; };
+		AC59B1E828B520EE00106F30 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AC59B1E728B520EE00106F30 /* PKHUD */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
@@ -72,6 +74,7 @@
 		AC59B1D728B50EEA00106F30 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
 		AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorTest.swift; sourceTree = "<group>"; };
 		AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+Error.swift"; sourceTree = "<group>"; };
+		AC59B1E428B5209900106F30 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC59B1E828B520EE00106F30 /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +134,7 @@
 			children = (
 				AC44B8AC28ABE45500FAD6F7 /* mvp-example */,
 				AC44B8AB28ABE45500FAD6F7 /* Products */,
+				AC59B1E628B520EE00106F30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +166,21 @@
 				AC44B8BB28ABE45800FAD6F7 /* Info.plist */,
 			);
 			path = "mvp-example";
+			sourceTree = "<group>";
+		};
+		AC59B1E328B5207E00106F30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC59B1E428B5209900106F30 /* ProgressHUD.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC59B1E628B520EE00106F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AC94C30A28ACBE0000FBC729 /* DI */ = {
@@ -281,6 +301,7 @@
 		ACEFA54528ABF38C00B7355A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC59B1E328B5207E00106F30 /* View */,
 				AC94C31428AE71E100FBC729 /* Validator */,
 				AC94C32728AE7F5700FBC729 /* Entity */,
 				AC94C31328AE71DC00FBC729 /* Api */,
@@ -337,6 +358,7 @@
 			);
 			name = "mvp-example";
 			packageProductDependencies = (
+				AC59B1E728B520EE00106F30 /* PKHUD */,
 			);
 			productName = "mvp-example";
 			productReference = AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */;
@@ -390,6 +412,7 @@
 			);
 			mainGroup = AC44B8A128ABE45500FAD6F7;
 			packageReferences = (
+				AC59B1E228B5202400106F30 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = AC44B8AB28ABE45500FAD6F7 /* Products */;
 			projectDirPath = "";
@@ -482,6 +505,7 @@
 				AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
 				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
+				AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */,
 				AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
@@ -768,6 +792,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC59B1E228B5202400106F30 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC59B1E728B520EE00106F30 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC59B1E228B5202400106F30 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC44B8A228ABE45500FAD6F7 /* Project object */;
 }

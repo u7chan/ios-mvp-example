@@ -26,7 +26,7 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func loginButton(_ sender: Any) {
-        self.presenter.doLogin(userName: "", password: "hoge")
+        self.presenter.doLogin(userName: "dummy", password: "hoge")
     }
 }
 
@@ -34,11 +34,11 @@ final class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewProtocol {
     func showProgress() {
-        self.showProgressAlert()
+        ProgressHUD.show()
     }
 
     func hideProgress() {
-        self.dismiss(animated: false)
+        ProgressHUD.hide()
     }
 
     func showError(message: String) {
