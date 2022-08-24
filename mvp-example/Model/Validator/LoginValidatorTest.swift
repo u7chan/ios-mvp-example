@@ -15,8 +15,8 @@ final class LoginValidatorTest: XCTestCase {
 
     func test_ユーザー名の検証_異常系() throws {
         let expect = DomainError.validationError(reason: LoginValidator.Const.kUserNameError)
-        XCTAssertThrowsError(try LoginValidator.validateUserName(userName: "")) { error in
-            XCTAssert(expect == error)
+        XCTAssertThrowsError(try LoginValidator.validateUserName(userName: "")) { actual in
+            XCTAssert(expect == actual)
         }
     }
 
@@ -26,8 +26,8 @@ final class LoginValidatorTest: XCTestCase {
 
     func test_パスワードの検証_異常系() throws {
         let expect = DomainError.validationError(reason: LoginValidator.Const.kPasswordError)
-        XCTAssertThrowsError(try LoginValidator.validatePassword(password: "")) { error in
-            XCTAssert(expect == error)
+        XCTAssertThrowsError(try LoginValidator.validatePassword(password: "")) { actual in
+            XCTAssert(expect == actual)
         }
     }
 }
