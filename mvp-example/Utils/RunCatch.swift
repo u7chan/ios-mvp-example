@@ -7,11 +7,11 @@
 
 import Foundation
 
-internal typealias RunClosure = () async throws -> Void
-internal typealias RunSuccess = () -> Void
-internal typealias RunFailure = (Error) -> Void
+typealias RunClosure = () async throws -> Void
+typealias RunSuccess = () -> Void
+typealias RunFailure = (Error) -> Void
 
-internal func runCatch(
+func runCatch(
     closure: @escaping RunClosure,
     success: RunSuccess? = nil,
     failure: RunFailure? = nil
@@ -29,9 +29,6 @@ internal func runCatch(
                 }
             }
         } catch {
-            if !isTesting() {
-                print("[ERROR]: \(error)") // TODO: feature logging
-            }
             if let failure = failure {
                 if isTesting() {
                     failure(error)

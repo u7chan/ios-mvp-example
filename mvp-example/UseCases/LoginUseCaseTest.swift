@@ -19,7 +19,7 @@ final class LoginUseCaseTest: XCTestCase {
 
     func test_invoke_正常系() throws {
         XCTContext.runActivity(named: "リポジトリのパラメータを検証") { _ in
-            self.repositoryMock.singinHandler = { (userName, password) in
+            self.repositoryMock.authenticateHandler = { (userName, password) in
                 XCTAssertEqual("#user", userName)
                 XCTAssertEqual("#password", password)
             }
@@ -32,7 +32,7 @@ final class LoginUseCaseTest: XCTestCase {
         }
 
         XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.repositoryMock.singinCallCount)
+            XCTAssertEqual(1, self.repositoryMock.authenticateCallCount)
         }
     }
 
@@ -45,7 +45,7 @@ final class LoginUseCaseTest: XCTestCase {
         }
 
         XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(0, self.repositoryMock.singinCallCount)
+            XCTAssertEqual(0, self.repositoryMock.authenticateCallCount)
         }
     }
 
@@ -58,7 +58,7 @@ final class LoginUseCaseTest: XCTestCase {
         }
 
         XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(0, self.repositoryMock.singinCallCount)
+            XCTAssertEqual(0, self.repositoryMock.authenticateCallCount)
         }
     }
 }
