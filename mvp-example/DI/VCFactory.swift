@@ -9,7 +9,10 @@ import UIKit
 
 struct VCFactory {
     static func createLoginViewController() -> UIViewController {
-        let presenter = LoginPresenter(loginUseCase: SingletonContainer.shared.useCaseModules.loginUseCase)
+        let presenter = LoginPresenter(
+            executor: ExecutorTask(),
+            loginUseCase: SingletonContainer.shared.useCaseModules.loginUseCase
+        )
         let vc = LoginViewController(presenter: presenter)
         vc.modalPresentationStyle = .fullScreen
         return vc

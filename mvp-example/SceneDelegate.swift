@@ -51,3 +51,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 }
+
+private func isTesting() -> Bool {
+    ProcessInfo.processInfo.environment["RUN_ENV"] == "TEST"
+}

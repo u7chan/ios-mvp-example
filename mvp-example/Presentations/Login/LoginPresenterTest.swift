@@ -16,18 +16,15 @@ final class LoginPresenterTest: XCTestCase {
     override func setUpWithError() throws {
         self.useCaseMock = LoginUseCaseProtocolMock()
         self.viewMock = LoginViewProtocolMock()
-        self.presenter = LoginPresenter(loginUseCase: useCaseMock)
+        self.presenter = LoginPresenter(executor: ExecutorXCTest(self), loginUseCase: useCaseMock)
         self.presenter.attachView(view: viewMock)
     }
 
     func test_ログイン処理_正常系() throws {
-        let exp = expectation(description: "TimeOut")
-
         XCTContext.runActivity(named: "ユースケースのパラメータを検証") { _ in
             self.useCaseMock.invokeHandler = { (userName, password) in
                 XCTAssertEqual("#user", userName)
                 XCTAssertEqual("#password", password)
-                exp.fulfill()
             }
         }
 
@@ -41,8 +38,6 @@ final class LoginPresenterTest: XCTestCase {
             XCTAssertEqual(1, self.useCaseMock.invokeCallCount)
         }
 
-        wait(for: [exp], timeout: 5.0)
-
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
         }
@@ -53,11 +48,8 @@ final class LoginPresenterTest: XCTestCase {
     }
 
     func test_ログイン処理_異常系_unknownError() throws {
-        let exp = expectation(description: "TimeOut")
-
         self.useCaseMock.invokeHandler = { (_, _) in
-            exp.fulfill()
-            throw NSError(domain: "Test", code: -1) // unknownError
+            throw NSError(domain: "Test", code: -1) // Throwing unknown error
         }
 
         XCTContext.runActivity(named: "エラー表示の文言を検証") { _ in
@@ -66,9 +58,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(userName: "#user", password: "#password")
-
-        wait(for: [exp], timeout: 5.0)
+        self.presenter.doLogin(userName: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
@@ -80,10 +70,7 @@ final class LoginPresenterTest: XCTestCase {
     }
 
     func test_ログイン処理_異常系_networkUnableError() throws {
-        let exp = expectation(description: "TimeOut")
-
         self.useCaseMock.invokeHandler = { (_, _) in
-            exp.fulfill()
             throw ApiError.networkUnableError
         }
 
@@ -93,9 +80,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(userName: "#user", password: "#password")
-
-        wait(for: [exp], timeout: 5.0)
+        self.presenter.doLogin(userName: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
@@ -107,10 +92,7 @@ final class LoginPresenterTest: XCTestCase {
     }
 
     func test_ログイン処理_異常系_validationError() throws {
-        let exp = expectation(description: "TimeOut")
-
         self.useCaseMock.invokeHandler = { (_, _) in
-            exp.fulfill()
             throw DomainError.validationError(reason: "#invalid")
         }
 
@@ -121,8 +103,6 @@ final class LoginPresenterTest: XCTestCase {
         }
 
         self.presenter.doLogin(userName: "", password: "")
-
-        wait(for: [exp], timeout: 5.0)
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)

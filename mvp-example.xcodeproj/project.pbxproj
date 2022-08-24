@@ -19,6 +19,9 @@
 		AC59B1E828B520EE00106F30 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AC59B1E728B520EE00106F30 /* PKHUD */; };
 		AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */; };
 		AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */; };
+		AC59B1F028B662F400106F30 /* ExecutorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */; };
+		AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F128B6645B00106F30 /* ExecutorTask.swift */; };
+		AC59B1F928B66A6300106F30 /* ExecutorXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
@@ -37,17 +40,14 @@
 		AC94C32928AE7F6600FBC729 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32828AE7F6600FBC729 /* User.swift */; };
 		AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */; };
 		AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */; };
-		AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33028AE8AB600FBC729 /* RunCatch.swift */; };
 		AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */; };
 		AC94C33728AFEC6200FBC729 /* ApiModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33628AFEC6200FBC729 /* ApiModules.swift */; };
 		AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33828AFEC7B00FBC729 /* ReopositoryModules.swift */; };
 		AC94C33B28AFECED00FBC729 /* UseCaseModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */; };
-		AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */; };
 		AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */; };
 		ACBCF08828B274620076AEEF /* UIViewController+showProgressAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */; };
 		ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */; };
 		ACBCF08F28B281BE0076AEEF /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */; };
-		ACEDE2DE28B2918D003487BF /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEDE2DD28B2918D003487BF /* Env.swift */; };
 		ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */; };
 		ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54928ABF44900B7355A /* Entrypoint.swift */; };
 		ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */; };
@@ -79,6 +79,9 @@
 		AC59B1E428B5209900106F30 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTest.swift; sourceTree = "<group>"; };
 		AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+runAsyncTest.swift"; sourceTree = "<group>"; };
+		AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorProtocol.swift; sourceTree = "<group>"; };
+		AC59B1F128B6645B00106F30 /* ExecutorTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorTask.swift; sourceTree = "<group>"; };
+		AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorXCTest.swift; sourceTree = "<group>"; };
 		AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -97,17 +100,14 @@
 		AC94C32828AE7F6600FBC729 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseProtocol.swift; sourceTree = "<group>"; };
 		AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
-		AC94C33028AE8AB600FBC729 /* RunCatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCatch.swift; sourceTree = "<group>"; };
 		AC94C33428AFE85600FBC729 /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		AC94C33628AFEC6200FBC729 /* ApiModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModules.swift; sourceTree = "<group>"; };
 		AC94C33828AFEC7B00FBC729 /* ReopositoryModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReopositoryModules.swift; sourceTree = "<group>"; };
 		AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseModules.swift; sourceTree = "<group>"; };
-		AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterModules.swift; sourceTree = "<group>"; };
 		AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonContainer.swift; sourceTree = "<group>"; };
 		ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showProgressAlert.swift"; sourceTree = "<group>"; };
 		ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
-		ACEDE2DD28B2918D003487BF /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +154,6 @@
 		AC44B8AC28ABE45500FAD6F7 /* mvp-example */ = {
 			isa = PBXGroup;
 			children = (
-				AC94C32F28AE8AA300FBC729 /* Utils */,
 				AC94C30E28AE6F6B00FBC729 /* Extensions */,
 				AC94C30D28AE6F5400FBC729 /* Constants */,
 				ACEFA54528ABF38C00B7355A /* Model */,
@@ -187,13 +186,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC59B1EE28B662D800106F30 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */,
+				AC59B1F128B6645B00106F30 /* ExecutorTask.swift */,
+				AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
 		AC94C30A28ACBE0000FBC729 /* DI */ = {
 			isa = PBXGroup;
 			children = (
 				AC94C33628AFEC6200FBC729 /* ApiModules.swift */,
 				AC94C33828AFEC7B00FBC729 /* ReopositoryModules.swift */,
 				AC94C33A28AFECED00FBC729 /* UseCaseModules.swift */,
-				AC94C33C28AFEDE400FBC729 /* PresenterModules.swift */,
 				AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */,
 				AC94C30B28ACBE3600FBC729 /* VCFactory.swift */,
 			);
@@ -276,15 +284,6 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		AC94C32F28AE8AA300FBC729 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				ACEDE2DD28B2918D003487BF /* Env.swift */,
-				AC94C33028AE8AB600FBC729 /* RunCatch.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		ACEFA54328ABF35A00B7355A /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +306,7 @@
 		ACEFA54528ABF38C00B7355A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC59B1EE28B662D800106F30 /* Thread */,
 				AC59B1E328B5207E00106F30 /* View */,
 				AC94C31428AE71E100FBC729 /* Validator */,
 				AC94C32728AE7F5700FBC729 /* Entity */,
@@ -499,16 +499,15 @@
 				ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */,
 				AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */,
 				AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */,
+				AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */,
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
 				AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */,
 				AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */,
-				AC94C33D28AFEDE400FBC729 /* PresenterModules.swift in Sources */,
 				AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */,
 				AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */,
 				AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */,
-				AC94C33128AE8AB600FBC729 /* RunCatch.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
 				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
 				AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */,
@@ -517,7 +516,7 @@
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
 				AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */,
 				AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */,
-				ACEDE2DE28B2918D003487BF /* Env.swift in Sources */,
+				AC59B1F028B662F400106F30 /* ExecutorProtocol.swift in Sources */,
 				AC94C31F28AE74C200FBC729 /* DbError.swift in Sources */,
 				AC94C31928AE728F00FBC729 /* LoginApiRequest.swift in Sources */,
 				AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */,
@@ -540,6 +539,7 @@
 				AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */,
 				AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */,
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
+				AC59B1F928B66A6300106F30 /* ExecutorXCTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
