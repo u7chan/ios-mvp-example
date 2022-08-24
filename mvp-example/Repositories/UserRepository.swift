@@ -9,7 +9,7 @@ import Foundation
 
 final class UserRepository {
     private let loginApi: LoginApiProtocol
-    private var singedInUser: User?
+    private var signedInUser: User?
 
     init(loginApi: LoginApiProtocol) {
         self.loginApi = loginApi
@@ -20,7 +20,12 @@ final class UserRepository {
 
 extension UserRepository: UserRepositoryProtocol {
     func authenticate(userName: String, password: String) async throws {
-        let result = try await self.loginApi.singin(params: LoginApiRequest(name: userName, password: password))
-        self.singedInUser = User(id: result.userId, name: result.name, expireAt: result.expireAt)
+        let request = LoginApiRequest(name: userName, password: password)
+        let result = try await self.loginApi.login(params: request)
+        self.signedInUser = User(id: result.userId, name: result.name, expireAt: result.expireAt)
+    }
+
+    func fetchSignedInUser() async throws -> User? {
+        self.signedInUser
     }
 }

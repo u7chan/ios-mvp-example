@@ -17,8 +17,8 @@ final class LoginUseCaseTest: XCTestCase {
         self.useCase = LoginUseCase(userRepository: self.repositoryMock)
     }
 
-    func test_invoke_正常系() throws {
-        XCTContext.runActivity(named: "リポジトリのパラメータを検証") { _ in
+    func test_ユースケースの実行_正常系() throws {
+        XCTContext.runActivity(named: "リポジトリメソッドのパラメータを検証") { _ in
             self.repositoryMock.authenticateHandler = { (userName, password) in
                 XCTAssertEqual("#user", userName)
                 XCTAssertEqual("#password", password)
@@ -28,7 +28,7 @@ final class LoginUseCaseTest: XCTestCase {
         self.runAsyncTest {
             try await self.useCase.invoke(userName: "#user", password: "#password")
         } catchError: { _ in
-            XCTFail("Unreachable")
+            XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
 
         XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
@@ -36,10 +36,10 @@ final class LoginUseCaseTest: XCTestCase {
         }
     }
 
-    func test_invoke_異常系_userNameEmpty() throws {
+    func test_ユースケースの実行_異常系_userNameEmpty() throws {
         self.runAsyncTest {
             try await self.useCase.invoke(userName: "", password: "#password")
-            XCTFail("Unreachable")
+            XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
         }
@@ -49,10 +49,10 @@ final class LoginUseCaseTest: XCTestCase {
         }
     }
 
-    func test_invoke_異常系_passwordEmpty() throws {
+    func test_ユースケースの実行_異常系_passwordEmpty() throws {
         self.runAsyncTest {
             try await self.useCase.invoke(userName: "#user", password: "")
-            XCTFail("Unreachable")
+            XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
         }

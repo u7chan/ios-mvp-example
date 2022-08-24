@@ -9,10 +9,10 @@ import XCTest
 
 extension XCTestCase {
     func runAsyncTest(
-        named testName: String = #function,
-        in file: StaticString = #file,
-        at line: UInt = #line,
-        withTimeout timeout: TimeInterval = 10,
+        _ testName: String = #function,
+        _ file: StaticString = #file,
+        _ line: UInt = #line,
+        _ timeout: TimeInterval = 10,
         test: @escaping () async throws -> Void,
         catchError: ((Error) -> Void)? = nil
     ) {

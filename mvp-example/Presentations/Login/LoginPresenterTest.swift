@@ -21,7 +21,7 @@ final class LoginPresenterTest: XCTestCase {
     }
 
     func test_ログイン処理_正常系() throws {
-        XCTContext.runActivity(named: "ユースケースのパラメータを検証") { _ in
+        XCTContext.runActivity(named: "ユースケースメソッドのパラメータを検証") { _ in
             self.useCaseMock.invokeHandler = { (userName, password) in
                 XCTAssertEqual("#user", userName)
                 XCTAssertEqual("#password", password)
@@ -34,7 +34,7 @@ final class LoginPresenterTest: XCTestCase {
             XCTAssertEqual(1, self.viewMock.showProgressCallCount)
         }
 
-        XCTContext.runActivity(named: "ユースケースの呼び出しを検証") { _ in
+        XCTContext.runActivity(named: "ユースケースメソッドの呼び出しを検証") { _ in
             XCTAssertEqual(1, self.useCaseMock.invokeCallCount)
         }
 
