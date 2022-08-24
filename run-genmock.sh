@@ -13,7 +13,7 @@ if [ -z "$TARGET_DIR" ] || [ -z "$EXPORT_MOCK_FILE" ] || [ -z "$SCHEME_NAME" ]; 
   echo "usage: "
   echo "  arg1: <target_dir>"
   echo "  arg2: <export_mock_file>"
-  echo "  arg2: <scheme_name>"
+  echo "  arg3: <scheme_name>"
   exit 1
 fi
 
