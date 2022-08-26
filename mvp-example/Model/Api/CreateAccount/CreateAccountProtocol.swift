@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+/// @mockable(typealias: T = AnyObject; U = StringProtocol)
+protocol CreateAccountProtocol: AnyObject {
+    func create(params: CreateAccountRequest) async throws -> CreateAccountResponse
+}

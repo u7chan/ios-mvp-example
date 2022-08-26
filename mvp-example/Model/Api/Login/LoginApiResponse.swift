@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct LoginApiData: Codable {
+struct LoginApiResponse: Codable {
+    let data: LoginApiResponseData
+}
+
+struct LoginApiResponseData: Codable {
     let id: Int
     let name: String
     let expireAt: String
-}
-
-struct LoginApiResponse: Codable {
-    let data: LoginApiData
 }

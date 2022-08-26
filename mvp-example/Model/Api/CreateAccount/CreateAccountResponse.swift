@@ -8,7 +8,9 @@
 import Foundation
 
 struct CreateAccountResponse: Codable {
+    let data: CreateAccountResponseData
+}
+
+struct CreateAccountResponseData: Codable {
     let id: Int
-    let email: String
-    let password: String
 }
