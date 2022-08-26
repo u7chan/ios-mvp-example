@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct LoginApiResponse: Codable {
+struct LoginApiData: Codable {
     let userId: Int
     let name: String
     let expireAt: String
+}
+
+struct LoginApiResponse: Codable {
+    let data: LoginApiData
 }

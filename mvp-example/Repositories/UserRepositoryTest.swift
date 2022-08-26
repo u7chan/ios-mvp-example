@@ -22,7 +22,7 @@ final class UserRepositoryTest: XCTestCase {
             self.loginApiMock.loginHandler = { (params) in
                 XCTAssertEqual("#user", params.name)
                 XCTAssertEqual("#password", params.password)
-                return LoginApiResponse(userId: 1, name: "#user-result", expireAt: "#date")
+                return LoginApiResponse(data: LoginApiData(userId: 1, name: "#user-result", expireAt: "#date"))
             }
         }
 
@@ -55,7 +55,7 @@ final class UserRepositoryTest: XCTestCase {
     }
 
     func test_サインイン済みユーザーを取得_正常系() throws {
-        let loginApiResponse = LoginApiResponse(userId: 1, name: "#signedIn", expireAt: "#date")
+        let loginApiResponse = LoginApiResponse(data: LoginApiData(userId: 1, name: "#signedIn", expireAt: "#date"))
         self.loginApiMock.loginHandler = { (_) in
             loginApiResponse
         }
@@ -63,9 +63,9 @@ final class UserRepositoryTest: XCTestCase {
         self.runAsyncTest {
             try await self.repository.authenticate(userName: "#user", password: "#password")
             let actual = try await self.repository.fetchSignedInUser()
-            XCTAssertEqual(loginApiResponse.userId, actual?.id)
-            XCTAssertEqual(loginApiResponse.name, actual?.name)
-            XCTAssertEqual(loginApiResponse.expireAt, actual?.expireAt)
+            XCTAssertEqual(loginApiResponse.data.userId, actual?.id)
+            XCTAssertEqual(loginApiResponse.data.name, actual?.name)
+            XCTAssertEqual(loginApiResponse.data.expireAt, actual?.expireAt)
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }

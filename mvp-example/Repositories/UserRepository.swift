@@ -22,7 +22,7 @@ extension UserRepository: UserRepositoryProtocol {
     func authenticate(userName: String, password: String) async throws {
         let request = LoginApiRequest(name: userName, password: password)
         let result = try await self.loginApi.login(params: request)
-        self.signedInUser = User(id: result.userId, name: result.name, expireAt: result.expireAt)
+        self.signedInUser = result.toUser()
     }
 
     func fetchSignedInUser() async throws -> User? {

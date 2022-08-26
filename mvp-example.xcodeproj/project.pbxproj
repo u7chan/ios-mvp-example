@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1556E128B91DA600190D48 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E028B91DA600190D48 /* CreateAccountRequest.swift */; };
+		AC1556E328B91DB700190D48 /* CreateAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E228B91DB700190D48 /* CreateAccountResponse.swift */; };
+		AC1556E528B91DD400190D48 /* CreateAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */; };
+		AC1556E728B91DE500190D48 /* CreateAccountFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E628B91DE500190D48 /* CreateAccountFake.swift */; };
+		AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E928B91FE200190D48 /* ToUser.swift */; };
 		AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */; };
 		AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */; };
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
@@ -66,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC1556E028B91DA600190D48 /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
+		AC1556E228B91DB700190D48 /* CreateAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountResponse.swift; sourceTree = "<group>"; };
+		AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountProtocol.swift; sourceTree = "<group>"; };
+		AC1556E628B91DE500190D48 /* CreateAccountFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountFake.swift; sourceTree = "<group>"; };
+		AC1556E928B91FE200190D48 /* ToUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToUser.swift; sourceTree = "<group>"; };
 		AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvp-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +145,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC1556DF28B91D3100190D48 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				AC1556E028B91DA600190D48 /* CreateAccountRequest.swift */,
+				AC1556E228B91DB700190D48 /* CreateAccountResponse.swift */,
+				AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */,
+				AC1556E628B91DE500190D48 /* CreateAccountFake.swift */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		AC1556E828B91F8A00190D48 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				AC1556E928B91FE200190D48 /* ToUser.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
 		AC44B8A128ABE45500FAD6F7 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				AC94C31728AE726800FBC729 /* Login */,
+				AC1556DF28B91D3100190D48 /* CreateAccount */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -309,11 +339,12 @@
 		ACEFA54528ABF38C00B7355A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC94C31328AE71DC00FBC729 /* Api */,
 				AC59B1EE28B662D800106F30 /* Thread */,
 				AC59B1E328B5207E00106F30 /* View */,
 				AC94C31428AE71E100FBC729 /* Validator */,
 				AC94C32728AE7F5700FBC729 /* Entity */,
-				AC94C31328AE71DC00FBC729 /* Api */,
+				AC1556E828B91F8A00190D48 /* Translator */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,10 +531,13 @@
 				AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */,
 				AC94C33B28AFECED00FBC729 /* UseCaseModules.swift in Sources */,
 				AC94C30C28ACBE3600FBC729 /* VCFactory.swift in Sources */,
+				AC1556E528B91DD400190D48 /* CreateAccountProtocol.swift in Sources */,
 				ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */,
 				AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */,
 				AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */,
+				AC1556E328B91DB700190D48 /* CreateAccountResponse.swift in Sources */,
 				AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */,
+				AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */,
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
@@ -515,7 +549,9 @@
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
 				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
 				AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */,
+				AC1556E728B91DE500190D48 /* CreateAccountFake.swift in Sources */,
 				AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */,
+				AC1556E128B91DA600190D48 /* CreateAccountRequest.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
 				AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */,
