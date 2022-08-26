@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginApiData: Codable {
-    let userId: Int
+    let id: Int
     let name: String
     let expireAt: String
 }

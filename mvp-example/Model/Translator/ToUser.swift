@@ -11,7 +11,7 @@ extension LoginApiResponse {
     func toUser() -> User {
         let data = self.data
         return User(
-            id: data.userId,
+            id: data.id,
             name: data.name,
             expireAt: data.expireAt
         )

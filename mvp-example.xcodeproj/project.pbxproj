@@ -12,6 +12,8 @@
 		AC1556E528B91DD400190D48 /* CreateAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */; };
 		AC1556E728B91DE500190D48 /* CreateAccountFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E628B91DE500190D48 /* CreateAccountFake.swift */; };
 		AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E928B91FE200190D48 /* ToUser.swift */; };
+		AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
+		AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
 		AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */; };
 		AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */; };
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
@@ -76,6 +78,7 @@
 		AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountProtocol.swift; sourceTree = "<group>"; };
 		AC1556E628B91DE500190D48 /* CreateAccountFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountFake.swift; sourceTree = "<group>"; };
 		AC1556E928B91FE200190D48 /* ToUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToUser.swift; sourceTree = "<group>"; };
+		AC1556EB28B927C900190D48 /* String+decodeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+decodeJSON.swift"; sourceTree = "<group>"; };
 		AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvp-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +253,7 @@
 		AC94C30E28AE6F6B00FBC729 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AC1556EB28B927C900190D48 /* String+decodeJSON.swift */,
 				AC94C32528AE7AB400FBC729 /* Task+sleepMillis.swift */,
 				AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */,
 				AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */,
@@ -538,6 +542,7 @@
 				AC1556E328B91DB700190D48 /* CreateAccountResponse.swift in Sources */,
 				AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */,
 				AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */,
+				AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */,
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
@@ -576,6 +581,7 @@
 			files = (
 				AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */,
 				AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */,
+				AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */,
 				AC59B1FC28B6729300106F30 /* UserRepositoryTest.swift in Sources */,
 				AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */,
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
