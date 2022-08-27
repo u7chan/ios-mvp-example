@@ -9,5 +9,5 @@ import Foundation
 
 /// @mockable(typealias: T = AnyObject; U = StringProtocol)
 protocol SignupUseCaseProtocol: AnyObject {
-    func invoke(email: String, password: String) async throws
+    func invoke(email: String, password: String, confirmPassword: String) async throws
 }

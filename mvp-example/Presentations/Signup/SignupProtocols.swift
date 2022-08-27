@@ -17,5 +17,5 @@ protocol SignupViewProtocol: AnyObject {
 
 protocol SignupPresenterProtocol: AnyObject {
     func attachView(view: SignupViewProtocol)
-    func signupButtonTapped(email: String, password: String)
+    func signupButtonTapped(email: String, password: String, confirmPassword: String)
 }

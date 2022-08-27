@@ -10,7 +10,7 @@ import XCTest
 
 final class UserValidatorTest: XCTestCase {
     func test_Emailの検証_正常系() throws {
-        XCTAssertNoThrow(try UserValidator.validateEmail(email: "dummy"))
+        XCTAssertNoThrow(try UserValidator.validateEmail(email: "#email"))
     }
 
     func test_Emailの検証_異常系() throws {
@@ -21,12 +21,23 @@ final class UserValidatorTest: XCTestCase {
     }
 
     func test_パスワードの検証_正常系() throws {
-        XCTAssertNoThrow(try UserValidator.validatePassword(password: "dummy"))
+        XCTAssertNoThrow(try UserValidator.validatePassword(password: "#password"))
     }
 
     func test_パスワードの検証_異常系() throws {
         let expect = DomainError.validationError(reason: UserValidator.Const.kPasswordError)
         XCTAssertThrowsError(try UserValidator.validatePassword(password: "")) { actual in
+            XCTAssert(expect == actual)
+        }
+    }
+
+    func test_確認パスワードの検証_正常系() throws {
+        XCTAssertNoThrow(try UserValidator.validateConfirmPassword(password: "#password", confirmPassword: "#password"))
+    }
+
+    func test_確認パスワードの検証_異常系() throws {
+        let expect = DomainError.validationError(reason: UserValidator.Const.kConfirmPasswordError)
+        XCTAssertThrowsError(try UserValidator.validateConfirmPassword(password: "#password", confirmPassword: "#password_")) { actual in
             XCTAssert(expect == actual)
         }
     }

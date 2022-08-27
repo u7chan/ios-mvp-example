@@ -29,10 +29,14 @@ extension SignupPresenter: SignupPresenterProtocol {
         self.view = view
     }
 
-    func signupButtonTapped(email: String, password: String) {
+    func signupButtonTapped(email: String, password: String, confirmPassword: String) {
         self.view?.showProgress()
         self.executor.runCatchAsync {
-            try await self.signupUseCase.invoke(email: email, password: password)
+            try await self.signupUseCase.invoke(
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword
+            )
         } success: {
             self.view?.hideProgress()
             self.view?.navigateToDashboard()

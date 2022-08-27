@@ -26,7 +26,11 @@ final class SignupViewController: UIViewController {
     }
 
     @IBAction private func signupButtonTapped(_ sender: Any) {
-        self.presenter.signupButtonTapped(email: "dummy", password: "hoge")
+        self.presenter.signupButtonTapped(
+            email: "dummy",
+            password: "hoge",
+            confirmPassword: "hoge"
+        )
     }
 }
 
