@@ -18,8 +18,9 @@ final class SignupUseCase {
 
 extension SignupUseCase: SignupUseCaseProtocol {
     func invoke(email: String, password: String) async throws {
-//        try LoginValidator.validateUserName(userName: userName)
-//        try LoginValidator.validatePassword(password: password)
-//        try await self.userRepository.authenticate(userName: userName, password: password)
+        try LoginValidator.validateEmail(email: email)
+        try LoginValidator.validatePassword(password: password)
+        try await self.userRepository.signup(email: email, password: password)
+        try await self.userRepository.authenticate(email: email, password: password)
     }
 }

@@ -12,7 +12,10 @@ struct ReopositoryModules {
 
     static func inject(depsModules: ApiModules) -> ReopositoryModules {
         ReopositoryModules(
-            userRepository: UserRepository(loginApi: depsModules.loginApi)
+            userRepository: UserRepository(
+                loginApi: depsModules.loginApi,
+                createAccountApi: depsModules.createAccountApi
+            )
         )
     }
 }

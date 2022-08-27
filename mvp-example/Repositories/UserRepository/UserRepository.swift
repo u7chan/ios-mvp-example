@@ -9,10 +9,15 @@ import Foundation
 
 final class UserRepository {
     private let loginApi: LoginApiProtocol
+    private let createAccountApi: CreateAccountApiProtocol
     private var signedInUser: User?
 
-    init(loginApi: LoginApiProtocol) {
+    init(
+        loginApi: LoginApiProtocol,
+        createAccountApi: CreateAccountApiProtocol
+    ) {
         self.loginApi = loginApi
+        self.createAccountApi = createAccountApi
     }
 }
 
@@ -23,6 +28,11 @@ extension UserRepository: UserRepositoryProtocol {
         let request = LoginApiRequest(email: email, password: password)
         let result = try await self.loginApi.login(params: request)
         self.signedInUser = result.toUser()
+    }
+
+    func signup(email: String, password: String) async throws {
+        let request = CreateAccountApiRequest(email: email, password: password)
+        _ = try await self.createAccountApi.create(params: request)
     }
 
     func fetchSignedInUser() async throws -> User? {

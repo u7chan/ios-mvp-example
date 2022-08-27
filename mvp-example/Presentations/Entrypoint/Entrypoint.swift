@@ -9,7 +9,7 @@ import UIKit
 
 struct Entrypoint {
     static func getFirstViewController() -> UIViewController {
-        let loggedIn = false // TODO: feat
+        let loggedIn = false // TODO: Check loggedIn
         return loggedIn ? VCFactory.createDashboardViewController() : VCFactory.createLoginViewController()
     }
 }

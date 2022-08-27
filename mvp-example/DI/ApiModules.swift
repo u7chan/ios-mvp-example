@@ -9,10 +9,12 @@ import Foundation
 
 struct ApiModules {
     let loginApi: LoginApiProtocol
+    let createAccountApi: CreateAccountApiProtocol
 
     static func inject() -> ApiModules {
         ApiModules(
-            loginApi: LoginApiFake() // TODO: Use Fake
+            loginApi: LoginApiFake(), // TODO: Use Fake
+            createAccountApi: CreateAccountApiFake() // TODO: Use Fake
         )
     }
 }

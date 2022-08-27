@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC1556E128B91DA600190D48 /* CreateAccountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E028B91DA600190D48 /* CreateAccountRequest.swift */; };
-		AC1556E328B91DB700190D48 /* CreateAccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E228B91DB700190D48 /* CreateAccountResponse.swift */; };
-		AC1556E528B91DD400190D48 /* CreateAccountProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */; };
-		AC1556E728B91DE500190D48 /* CreateAccountFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E628B91DE500190D48 /* CreateAccountFake.swift */; };
+		AC1556E128B91DA600190D48 /* CreateAccountApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E028B91DA600190D48 /* CreateAccountApiRequest.swift */; };
+		AC1556E328B91DB700190D48 /* CreateAccountApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E228B91DB700190D48 /* CreateAccountApiResponse.swift */; };
+		AC1556E528B91DD400190D48 /* CreateAccountApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E428B91DD400190D48 /* CreateAccountApiProtocol.swift */; };
+		AC1556E728B91DE500190D48 /* CreateAccountApiFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E628B91DE500190D48 /* CreateAccountApiFake.swift */; };
 		AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E928B91FE200190D48 /* ToUser.swift */; };
 		AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
 		AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
@@ -79,10 +79,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC1556E028B91DA600190D48 /* CreateAccountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountRequest.swift; sourceTree = "<group>"; };
-		AC1556E228B91DB700190D48 /* CreateAccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountResponse.swift; sourceTree = "<group>"; };
-		AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountProtocol.swift; sourceTree = "<group>"; };
-		AC1556E628B91DE500190D48 /* CreateAccountFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountFake.swift; sourceTree = "<group>"; };
+		AC1556E028B91DA600190D48 /* CreateAccountApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountApiRequest.swift; sourceTree = "<group>"; };
+		AC1556E228B91DB700190D48 /* CreateAccountApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountApiResponse.swift; sourceTree = "<group>"; };
+		AC1556E428B91DD400190D48 /* CreateAccountApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountApiProtocol.swift; sourceTree = "<group>"; };
+		AC1556E628B91DE500190D48 /* CreateAccountApiFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountApiFake.swift; sourceTree = "<group>"; };
 		AC1556E928B91FE200190D48 /* ToUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToUser.swift; sourceTree = "<group>"; };
 		AC1556EB28B927C900190D48 /* String+decodeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+decodeJSON.swift"; sourceTree = "<group>"; };
 		AC1556EE28BA451C00190D48 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
@@ -163,10 +163,10 @@
 		AC1556DF28B91D3100190D48 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
-				AC1556E028B91DA600190D48 /* CreateAccountRequest.swift */,
-				AC1556E228B91DB700190D48 /* CreateAccountResponse.swift */,
-				AC1556E428B91DD400190D48 /* CreateAccountProtocol.swift */,
-				AC1556E628B91DE500190D48 /* CreateAccountFake.swift */,
+				AC1556E028B91DA600190D48 /* CreateAccountApiRequest.swift */,
+				AC1556E228B91DB700190D48 /* CreateAccountApiResponse.swift */,
+				AC1556E428B91DD400190D48 /* CreateAccountApiProtocol.swift */,
+				AC1556E628B91DE500190D48 /* CreateAccountApiFake.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -207,6 +207,16 @@
 				AC1556FC28BA48A800190D48 /* SignupUseCase.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		AC15570028BA5ADF00190D48 /* UserRepository */ = {
+			isa = PBXGroup;
+			children = (
+				AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */,
+				AC94C31128AE70F800FBC729 /* UserRepository.swift */,
+				AC59B1FA28B6728600106F30 /* UserRepositoryTest.swift */,
+			);
+			path = UserRepository;
 			sourceTree = "<group>";
 		};
 		AC44B8A128ABE45500FAD6F7 = {
@@ -367,9 +377,7 @@
 		ACEFA54428ABF37D00B7355A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				AC94C30F28AE702C00FBC729 /* UserRepositoryProtocol.swift */,
-				AC94C31128AE70F800FBC729 /* UserRepository.swift */,
-				AC59B1FA28B6728600106F30 /* UserRepositoryTest.swift */,
+				AC15570028BA5ADF00190D48 /* UserRepository */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -570,11 +578,11 @@
 				AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */,
 				AC94C33B28AFECED00FBC729 /* UseCaseModules.swift in Sources */,
 				AC94C30C28ACBE3600FBC729 /* VCFactory.swift in Sources */,
-				AC1556E528B91DD400190D48 /* CreateAccountProtocol.swift in Sources */,
+				AC1556E528B91DD400190D48 /* CreateAccountApiProtocol.swift in Sources */,
 				ACEFA54A28ABF44900B7355A /* Entrypoint.swift in Sources */,
 				AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */,
 				AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */,
-				AC1556E328B91DB700190D48 /* CreateAccountResponse.swift in Sources */,
+				AC1556E328B91DB700190D48 /* CreateAccountApiResponse.swift in Sources */,
 				AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */,
 				AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */,
 				AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */,
@@ -591,9 +599,9 @@
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
 				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
 				AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */,
-				AC1556E728B91DE500190D48 /* CreateAccountFake.swift in Sources */,
+				AC1556E728B91DE500190D48 /* CreateAccountApiFake.swift in Sources */,
 				AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */,
-				AC1556E128B91DA600190D48 /* CreateAccountRequest.swift in Sources */,
+				AC1556E128B91DA600190D48 /* CreateAccountApiRequest.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
 				AC1556F928BA47C000190D48 /* SignupProtocols.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,

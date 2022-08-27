@@ -10,11 +10,16 @@ import XCTest
 
 final class UserRepositoryTest: XCTestCase {
     private var loginApiMock: LoginApiProtocolMock!
+    private var createAccountApiMock: CreateAccountApiProtocolMock!
     private var repository: UserRepositoryProtocol!
 
     override func setUpWithError() throws {
         self.loginApiMock = LoginApiProtocolMock()
-        self.repository = UserRepository(loginApi: self.loginApiMock)
+        self.createAccountApiMock = CreateAccountApiProtocolMock()
+        self.repository = UserRepository(
+            loginApi: self.loginApiMock,
+            createAccountApi: self.createAccountApiMock
+        )
     }
 
     func test_認証処理_正常系() throws {
