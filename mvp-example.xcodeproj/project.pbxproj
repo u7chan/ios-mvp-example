@@ -159,12 +159,12 @@
 			path = CreateAccount;
 			sourceTree = "<group>";
 		};
-		AC1556E828B91F8A00190D48 /* Translator */ = {
+		AC1556E828B91F8A00190D48 /* Translators */ = {
 			isa = PBXGroup;
 			children = (
 				AC1556E928B91FE200190D48 /* ToUser.swift */,
 			);
-			path = Translator;
+			path = Translators;
 			sourceTree = "<group>";
 		};
 		AC44B8A128ABE45500FAD6F7 = {
@@ -189,8 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				AC94C30E28AE6F6B00FBC729 /* Extensions */,
-				AC94C30D28AE6F5400FBC729 /* Constants */,
-				ACEFA54528ABF38C00B7355A /* Model */,
+				ACEFA54528ABF38C00B7355A /* Models */,
 				ACEFA54428ABF37D00B7355A /* Repositories */,
 				AC94C32A28AE821000FBC729 /* UseCases */,
 				AC94C30A28ACBE0000FBC729 /* DI */,
@@ -205,12 +204,12 @@
 			path = "mvp-example";
 			sourceTree = "<group>";
 		};
-		AC59B1E328B5207E00106F30 /* View */ = {
+		AC59B1E328B5207E00106F30 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				AC59B1E428B5209900106F30 /* ProgressHUD.swift */,
 			);
-			path = View;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		AC59B1E628B520EE00106F30 /* Frameworks */ = {
@@ -220,14 +219,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC59B1EE28B662D800106F30 /* Thread */ = {
+		AC59B1EE28B662D800106F30 /* Async */ = {
 			isa = PBXGroup;
 			children = (
 				AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */,
 				AC59B1F128B6645B00106F30 /* ExecutorTask.swift */,
 				AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */,
 			);
-			path = Thread;
+			path = Async;
 			sourceTree = "<group>";
 		};
 		AC94C30A28ACBE0000FBC729 /* DI */ = {
@@ -240,14 +239,6 @@
 				AC94C30B28ACBE3600FBC729 /* VCFactory.swift */,
 			);
 			path = DI;
-			sourceTree = "<group>";
-		};
-		AC94C30D28AE6F5400FBC729 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				AC94C32228AE750F00FBC729 /* Errors */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		AC94C30E28AE6F6B00FBC729 /* Extensions */ = {
@@ -272,13 +263,13 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		AC94C31428AE71E100FBC729 /* Validator */ = {
+		AC94C31428AE71E100FBC729 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
 				AC59B1D728B50EEA00106F30 /* LoginValidator.swift */,
 				AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */,
 			);
-			path = Validator;
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		AC94C31728AE726800FBC729 /* Login */ = {
@@ -302,12 +293,12 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		AC94C32728AE7F5700FBC729 /* Entity */ = {
+		AC94C32728AE7F5700FBC729 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				AC94C32828AE7F6600FBC729 /* User.swift */,
 			);
-			path = Entity;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		AC94C32A28AE821000FBC729 /* UseCases */ = {
@@ -323,6 +314,7 @@
 		ACEFA54328ABF35A00B7355A /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				AC59B1E328B5207E00106F30 /* Common */,
 				ACEFA54828ABF42F00B7355A /* Entrypoint */,
 				ACEFA54628ABF3A600B7355A /* Login */,
 				ACEFA54728ABF3C700B7355A /* Dashboard */,
@@ -340,17 +332,17 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		ACEFA54528ABF38C00B7355A /* Model */ = {
+		ACEFA54528ABF38C00B7355A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC94C32228AE750F00FBC729 /* Errors */,
 				AC94C31328AE71DC00FBC729 /* Api */,
-				AC59B1EE28B662D800106F30 /* Thread */,
-				AC59B1E328B5207E00106F30 /* View */,
-				AC94C31428AE71E100FBC729 /* Validator */,
-				AC94C32728AE7F5700FBC729 /* Entity */,
-				AC1556E828B91F8A00190D48 /* Translator */,
+				AC59B1EE28B662D800106F30 /* Async */,
+				AC94C31428AE71E100FBC729 /* Validators */,
+				AC94C32728AE7F5700FBC729 /* Entities */,
+				AC1556E828B91F8A00190D48 /* Translators */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ACEFA54628ABF3A600B7355A /* Login */ = {
