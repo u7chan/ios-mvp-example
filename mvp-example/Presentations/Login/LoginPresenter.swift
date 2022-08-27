@@ -29,7 +29,7 @@ extension LoginPresenter: LoginPresenterProtocol {
         self.view = view
     }
 
-    func doLogin(email: String, password: String) {
+    func loginButtonTapped(email: String, password: String) {
         self.view?.showProgress()
         self.executor.runCatchAsync {
             try await self.loginUseCase.invoke(email: email, password: password)
@@ -47,5 +47,9 @@ extension LoginPresenter: LoginPresenterProtocol {
                 self.view?.showError(message: "予期せぬエラーが発生しました") // TODO: const message
             }
         }
+    }
+
+    func signupButtonTapped() {
+        self.view?.navigateToSignup()
     }
 }

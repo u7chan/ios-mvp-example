@@ -13,9 +13,11 @@ protocol LoginViewProtocol: AnyObject {
     func hideProgress()
     func showError(message: String)
     func navigateToDashboard()
+    func navigateToSignup()
 }
 
 protocol LoginPresenterProtocol: AnyObject {
     func attachView(view: LoginViewProtocol)
-    func doLogin(email: String, password: String)
+    func loginButtonTapped(email: String, password: String)
+    func signupButtonTapped()
 }

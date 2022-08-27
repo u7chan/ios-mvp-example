@@ -26,11 +26,11 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func loginButtonTapped(_ sender: Any) {
-        self.presenter.doLogin(email: "dummy", password: "hoge")
+        self.presenter.loginButtonTapped(email: "dummy", password: "hoge")
     }
 
     @IBAction private func signupButtonTapped(_ sender: Any) {
-        self.present(VCFactory.createSignupViewController(), animated: true)
+        self.presenter.signupButtonTapped()
     }
 }
 
@@ -51,5 +51,9 @@ extension LoginViewController: LoginViewProtocol {
 
     func navigateToDashboard() {
         self.present(VCFactory.createDashboardViewController(), animated: false)
+    }
+
+    func navigateToSignup() {
+        self.present(VCFactory.createSignupViewController(), animated: true)
     }
 }

@@ -20,7 +20,7 @@ final class LoginPresenterTest: XCTestCase {
         self.presenter.attachView(view: viewMock)
     }
 
-    func test_ログイン処理_正常系() throws {
+    func test_ログインボタン押下_正常系() throws {
         XCTContext.runActivity(named: "ユースケースメソッドのパラメータを検証") { _ in
             self.useCaseMock.invokeHandler = { (email, password) in
                 XCTAssertEqual("#email", email)
@@ -28,7 +28,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(email: "#email", password: "#password")
+        self.presenter.loginButtonTapped(email: "#email", password: "#password")
 
         XCTContext.runActivity(named: "プログレス表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.showProgressCallCount)
@@ -47,7 +47,7 @@ final class LoginPresenterTest: XCTestCase {
         }
     }
 
-    func test_ログイン処理_異常系_unknownError() throws {
+    func test_ログインボタン押下_異常系_unknownError() throws {
         self.useCaseMock.invokeHandler = { (_, _) in
             throw NSError(domain: "Test", code: -1) // Throwing unknown error
         }
@@ -58,7 +58,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(email: "", password: "")
+        self.presenter.loginButtonTapped(email: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
@@ -69,7 +69,7 @@ final class LoginPresenterTest: XCTestCase {
         }
     }
 
-    func test_ログイン処理_異常系_networkUnableError() throws {
+    func test_ログインボタン押下_異常系_networkUnableError() throws {
         self.useCaseMock.invokeHandler = { (_, _) in
             throw ApiError.networkUnableError
         }
@@ -80,7 +80,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(email: "", password: "")
+        self.presenter.loginButtonTapped(email: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
@@ -91,7 +91,7 @@ final class LoginPresenterTest: XCTestCase {
         }
     }
 
-    func test_ログイン処理_異常系_validationError() throws {
+    func test_ログインボタン押下_異常系_validationError() throws {
         self.useCaseMock.invokeHandler = { (_, _) in
             throw DomainError.validationError(reason: "#invalid")
         }
@@ -102,7 +102,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(email: "", password: "")
+        self.presenter.loginButtonTapped(email: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
