@@ -9,7 +9,7 @@ excluded:
   - Carthage/
   - SourcePackages/
   - Generated/
-  - '*/OutputMocks.swift'
+  - '*/GeneratedMocks.swift'
 
 analyzer_rules: # Rules run by `swiftlint analyze`
   - explicit_self

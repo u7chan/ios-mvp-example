@@ -90,7 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 # Generated Mock
-*/OutputMocks.swift
+*/GeneratedMocks.swift
 
 # UnitTest Report
 test-results.html

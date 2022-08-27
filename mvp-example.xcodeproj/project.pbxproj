@@ -14,6 +14,7 @@
 		AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556E928B91FE200190D48 /* ToUser.swift */; };
 		AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
 		AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
+		AC1556F028BA456000190D48 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EE28BA451C00190D48 /* GeneratedMocks.swift */; };
 		AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */; };
 		AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */; };
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
@@ -30,7 +31,6 @@
 		AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F128B6645B00106F30 /* ExecutorTask.swift */; };
 		AC59B1F928B66A6300106F30 /* ExecutorXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */; };
 		AC59B1FC28B6729300106F30 /* UserRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1FA28B6728600106F30 /* UserRepositoryTest.swift */; };
-		AC59B1FE28B6798F00106F30 /* OutputMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
 		AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */; };
 		AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30628ACBD2A00FBC729 /* DashboardPresenter.swift */; };
@@ -79,6 +79,7 @@
 		AC1556E628B91DE500190D48 /* CreateAccountFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountFake.swift; sourceTree = "<group>"; };
 		AC1556E928B91FE200190D48 /* ToUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToUser.swift; sourceTree = "<group>"; };
 		AC1556EB28B927C900190D48 /* String+decodeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+decodeJSON.swift"; sourceTree = "<group>"; };
+		AC1556EE28BA451C00190D48 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvp-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		AC94C33E28AFEFD400FBC729 /* SingletonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonContainer.swift; sourceTree = "<group>"; };
 		ACBCF08728B274620076AEEF /* UIViewController+showProgressAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showProgressAlert.swift"; sourceTree = "<group>"; };
 		ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
-		ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMocks.swift; sourceTree = "<group>"; };
 		ACEFA54128ABEF7100B7355A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		ACEFA54928ABF44900B7355A /* Entrypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrypoint.swift; sourceTree = "<group>"; };
 		ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 				AC94C32A28AE821000FBC729 /* UseCases */,
 				AC94C30A28ACBE0000FBC729 /* DI */,
 				ACEFA54328ABF35A00B7355A /* Presentations */,
-				ACBCF08E28B281BE0076AEEF /* OutputMocks.swift */,
+				AC1556EE28BA451C00190D48 /* GeneratedMocks.swift */,
 				AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */,
 				AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */,
 				AC44B8B628ABE45800FAD6F7 /* Assets.xcassets */,
@@ -498,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./run-genmock.sh $PROJECT OutputMocks.swift mvp_example\n./run-lint.sh\n";
+			shellScript = "OUTPUT_FILE=\"GeneratedMocks.swift\"\n./run-genmock.sh $PROJECT $OUTPUT_FILE mvp_example\n./run-lint.sh\n";
 		};
 		AC013B2B28B3D84C00BC6B9E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -574,11 +574,11 @@
 				AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */,
 				AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */,
 				AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */,
+				AC1556F028BA456000190D48 /* GeneratedMocks.swift in Sources */,
 				AC59B1FC28B6729300106F30 /* UserRepositoryTest.swift in Sources */,
 				AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */,
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
 				AC59B1F928B66A6300106F30 /* ExecutorXCTest.swift in Sources */,
-				AC59B1FE28B6798F00106F30 /* OutputMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
