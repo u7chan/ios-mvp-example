@@ -22,13 +22,13 @@ final class LoginPresenterTest: XCTestCase {
 
     func test_ログイン処理_正常系() throws {
         XCTContext.runActivity(named: "ユースケースメソッドのパラメータを検証") { _ in
-            self.useCaseMock.invokeHandler = { (userName, password) in
-                XCTAssertEqual("#user", userName)
+            self.useCaseMock.invokeHandler = { (email, password) in
+                XCTAssertEqual("#email", email)
                 XCTAssertEqual("#password", password)
             }
         }
 
-        self.presenter.doLogin(userName: "#user", password: "#password")
+        self.presenter.doLogin(email: "#email", password: "#password")
 
         XCTContext.runActivity(named: "プログレス表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.showProgressCallCount)
@@ -58,7 +58,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(userName: "", password: "")
+        self.presenter.doLogin(email: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
@@ -80,7 +80,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(userName: "", password: "")
+        self.presenter.doLogin(email: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
@@ -102,7 +102,7 @@ final class LoginPresenterTest: XCTestCase {
             }
         }
 
-        self.presenter.doLogin(userName: "", password: "")
+        self.presenter.doLogin(email: "", password: "")
 
         XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
             XCTAssertEqual(1, self.viewMock.hideProgressCallCount)

@@ -9,13 +9,13 @@
 import XCTest
 
 final class LoginValidatorTest: XCTestCase {
-    func test_ユーザー名の検証_正常系() throws {
-        XCTAssertNoThrow(try LoginValidator.validateUserName(userName: "dummy"))
+    func test_Emailの検証_正常系() throws {
+        XCTAssertNoThrow(try LoginValidator.validateEmail(email: "dummy"))
     }
 
-    func test_ユーザー名の検証_異常系() throws {
-        let expect = DomainError.validationError(reason: LoginValidator.Const.kUserNameError)
-        XCTAssertThrowsError(try LoginValidator.validateUserName(userName: "")) { actual in
+    func test_Emailの検証_異常系() throws {
+        let expect = DomainError.validationError(reason: LoginValidator.Const.kEmailError)
+        XCTAssertThrowsError(try LoginValidator.validateEmail(email: "")) { actual in
             XCTAssert(expect == actual)
         }
     }

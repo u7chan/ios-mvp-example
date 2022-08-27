@@ -15,6 +15,12 @@
 		AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
 		AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EB28B927C900190D48 /* String+decodeJSON.swift */; };
 		AC1556F028BA456000190D48 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556EE28BA451C00190D48 /* GeneratedMocks.swift */; };
+		AC1556F428BA465400190D48 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556F228BA465400190D48 /* SignupViewController.swift */; };
+		AC1556F528BA465400190D48 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1556F328BA465400190D48 /* SignupViewController.xib */; };
+		AC1556F728BA47AB00190D48 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556F628BA47AB00190D48 /* SignupPresenter.swift */; };
+		AC1556F928BA47C000190D48 /* SignupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556F828BA47C000190D48 /* SignupProtocols.swift */; };
+		AC1556FD28BA48A800190D48 /* SignupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556FC28BA48A800190D48 /* SignupUseCase.swift */; };
+		AC1556FF28BA48B600190D48 /* SignupUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556FE28BA48B600190D48 /* SignupUseCaseProtocol.swift */; };
 		AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */; };
 		AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */; };
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
@@ -80,6 +86,12 @@
 		AC1556E928B91FE200190D48 /* ToUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToUser.swift; sourceTree = "<group>"; };
 		AC1556EB28B927C900190D48 /* String+decodeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+decodeJSON.swift"; sourceTree = "<group>"; };
 		AC1556EE28BA451C00190D48 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		AC1556F228BA465400190D48 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		AC1556F328BA465400190D48 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		AC1556F628BA47AB00190D48 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		AC1556F828BA47C000190D48 /* SignupProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocols.swift; sourceTree = "<group>"; };
+		AC1556FC28BA48A800190D48 /* SignupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCase.swift; sourceTree = "<group>"; };
+		AC1556FE28BA48B600190D48 /* SignupUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCaseProtocol.swift; sourceTree = "<group>"; };
 		AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvp-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +177,36 @@
 				AC1556E928B91FE200190D48 /* ToUser.swift */,
 			);
 			path = Translators;
+			sourceTree = "<group>";
+		};
+		AC1556F128BA460500190D48 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				AC1556F828BA47C000190D48 /* SignupProtocols.swift */,
+				AC1556F628BA47AB00190D48 /* SignupPresenter.swift */,
+				AC1556F228BA465400190D48 /* SignupViewController.swift */,
+				AC1556F328BA465400190D48 /* SignupViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		AC1556FA28BA486E00190D48 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */,
+				AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */,
+				AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AC1556FB28BA487A00190D48 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				AC1556FE28BA48B600190D48 /* SignupUseCaseProtocol.swift */,
+				AC1556FC28BA48A800190D48 /* SignupUseCase.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		AC44B8A128ABE45500FAD6F7 = {
@@ -304,9 +346,8 @@
 		AC94C32A28AE821000FBC729 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				AC94C32B28AE825100FBC729 /* LoginUseCaseProtocol.swift */,
-				AC94C32D28AE83A500FBC729 /* LoginUseCase.swift */,
-				AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */,
+				AC1556FA28BA486E00190D48 /* Login */,
+				AC1556FB28BA487A00190D48 /* Signup */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -317,6 +358,7 @@
 				AC59B1E328B5207E00106F30 /* Common */,
 				ACEFA54828ABF42F00B7355A /* Entrypoint */,
 				ACEFA54628ABF3A600B7355A /* Login */,
+				AC1556F128BA460500190D48 /* Signup */,
 				ACEFA54728ABF3C700B7355A /* Dashboard */,
 			);
 			path = Presentations;
@@ -467,6 +509,7 @@
 			files = (
 				ACEFA54E28ABF4C300B7355A /* LoginViewController.xib in Resources */,
 				AC44B8BA28ABE45800FAD6F7 /* LaunchScreen.storyboard in Resources */,
+				AC1556F528BA465400190D48 /* SignupViewController.xib in Resources */,
 				AC44B8B728ABE45800FAD6F7 /* Assets.xcassets in Resources */,
 				ACEFA54228ABEF7100B7355A /* DashboardViewController.xib in Resources */,
 			);
@@ -536,12 +579,14 @@
 				AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */,
 				AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */,
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,
+				AC1556F728BA47AB00190D48 /* SignupPresenter.swift in Sources */,
 				AC94C30528ACBC7E00FBC729 /* LoginProtocols.swift in Sources */,
 				AC94C32628AE7AB400FBC729 /* Task+sleepMillis.swift in Sources */,
 				AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */,
 				AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */,
 				AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */,
 				AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */,
+				AC1556FD28BA48A800190D48 /* SignupUseCase.swift in Sources */,
 				AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
 				AC94C31028AE702C00FBC729 /* UserRepositoryProtocol.swift in Sources */,
@@ -550,6 +595,7 @@
 				AC94C32E28AE83A500FBC729 /* LoginUseCase.swift in Sources */,
 				AC1556E128B91DA600190D48 /* CreateAccountRequest.swift in Sources */,
 				AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */,
+				AC1556F928BA47C000190D48 /* SignupProtocols.swift in Sources */,
 				ACEFA54C28ABF4B400B7355A /* LoginViewController.swift in Sources */,
 				AC94C33F28AFEFD400FBC729 /* SingletonContainer.swift in Sources */,
 				AC94C32C28AE825100FBC729 /* LoginUseCaseProtocol.swift in Sources */,
@@ -560,10 +606,12 @@
 				AC94C31D28AE74B000FBC729 /* ApiError.swift in Sources */,
 				AC94C31228AE70F800FBC729 /* UserRepository.swift in Sources */,
 				AC94C33728AFEC6200FBC729 /* ApiModules.swift in Sources */,
+				AC1556F428BA465400190D48 /* SignupViewController.swift in Sources */,
 				AC94C32128AE74DA00FBC729 /* DomainError.swift in Sources */,
 				AC94C31B28AE737E00FBC729 /* LoginApiResponse.swift in Sources */,
 				AC94C32928AE7F6600FBC729 /* User.swift in Sources */,
 				ACBCF08828B274620076AEEF /* UIViewController+showProgressAlert.swift in Sources */,
+				AC1556FF28BA48B600190D48 /* SignupUseCaseProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

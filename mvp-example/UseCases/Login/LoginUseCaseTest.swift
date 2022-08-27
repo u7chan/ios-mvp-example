@@ -19,14 +19,14 @@ final class LoginUseCaseTest: XCTestCase {
 
     func test_ユースケースの実行_正常系() throws {
         XCTContext.runActivity(named: "リポジトリメソッドのパラメータを検証") { _ in
-            self.repositoryMock.authenticateHandler = { (userName, password) in
-                XCTAssertEqual("#user", userName)
+            self.repositoryMock.authenticateHandler = { (email, password) in
+                XCTAssertEqual("#email", email)
                 XCTAssertEqual("#password", password)
             }
         }
 
         self.runAsyncTest {
-            try await self.useCase.invoke(userName: "#user", password: "#password")
+            try await self.useCase.invoke(email: "#email", password: "#password")
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
@@ -38,7 +38,7 @@ final class LoginUseCaseTest: XCTestCase {
 
     func test_ユースケースの実行_異常系_userNameEmpty() throws {
         self.runAsyncTest {
-            try await self.useCase.invoke(userName: "", password: "#password")
+            try await self.useCase.invoke(email: "", password: "#password")
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
@@ -51,7 +51,7 @@ final class LoginUseCaseTest: XCTestCase {
 
     func test_ユースケースの実行_異常系_passwordEmpty() throws {
         self.runAsyncTest {
-            try await self.useCase.invoke(userName: "#user", password: "")
+            try await self.useCase.invoke(email: "#user", password: "")
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP

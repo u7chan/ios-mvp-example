@@ -1,38 +1,38 @@
 //
-//  LoginPresenter.swift
+//  SignupPresenter.swift
 //  mvp-example
 //
-//  Created by unagami on 2022/08/17.
+//  Created by unagami on 2022/08/27.
 //
 
 import Foundation
 
-final class LoginPresenter {
-    private weak var view: LoginViewProtocol?
+final class SignupPresenter {
+    private weak var view: SignupViewProtocol?
 
     private let executor: ExecutorProtocol
-    private let loginUseCase: LoginUseCaseProtocol
+    private let signupUseCase: SignupUseCaseProtocol
 
     init(
         executor: ExecutorProtocol,
-        loginUseCase: LoginUseCaseProtocol
+        signupUseCase: SignupUseCaseProtocol
     ) {
         self.executor = executor
-        self.loginUseCase = loginUseCase
+        self.signupUseCase = signupUseCase
     }
 }
 
-// MARK: - LoginPresenterProtocol
+// MARK: - CreateAccountPresenterProtocol
 
-extension LoginPresenter: LoginPresenterProtocol {
-    func attachView(view: LoginViewProtocol) {
+extension SignupPresenter: SignupPresenterProtocol {
+    func attachView(view: SignupViewProtocol) {
         self.view = view
     }
 
-    func doLogin(email: String, password: String) {
+    func doSignup(email: String, password: String) {
         self.view?.showProgress()
         self.executor.runCatchAsync {
-            try await self.loginUseCase.invoke(email: email, password: password)
+            try await self.signupUseCase.invoke(email: email, password: password)
         } success: {
             self.view?.hideProgress()
             self.view?.navigateToDashboard()

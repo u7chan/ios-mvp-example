@@ -23,6 +23,7 @@ final class UserRepositoryTest: XCTestCase {
           "data": {
             "id": 1,
             "name": "#user",
+            "email": "#email",
             "expireAt": "#date"
           }
         }
@@ -30,14 +31,14 @@ final class UserRepositoryTest: XCTestCase {
 
         XCTContext.runActivity(named: "APIメソッドのパラメータを検証") { _ in
             self.loginApiMock.loginHandler = { (params) in
-                XCTAssertEqual("#user", params.name)
+                XCTAssertEqual("#email", params.email)
                 XCTAssertEqual("#password", params.password)
                 return loginApiResponse
             }
         }
 
         self.runAsyncTest {
-            try await self.repository.authenticate(userName: "#user", password: "#password")
+            try await self.repository.authenticate(email: "#email", password: "#password")
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
@@ -53,7 +54,7 @@ final class UserRepositoryTest: XCTestCase {
         }
 
         self.runAsyncTest {
-            try await self.repository.authenticate(userName: "#user", password: "#password")
+            try await self.repository.authenticate(email: "#email", password: "#password")
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
@@ -69,7 +70,8 @@ final class UserRepositoryTest: XCTestCase {
         {
           "data": {
             "id": 1,
-            "name": "#signedIn",
+            "name": "#user",
+            "email": "#email",
             "expireAt": "#date"
           }
         }
@@ -80,10 +82,11 @@ final class UserRepositoryTest: XCTestCase {
         }
 
         self.runAsyncTest {
-            try await self.repository.authenticate(userName: "#user", password: "#password")
+            try await self.repository.authenticate(email: "#email", password: "#password")
             let actual = try await self.repository.fetchSignedInUser()
             XCTAssertEqual(loginApiResponse.data.id, actual?.id)
             XCTAssertEqual(loginApiResponse.data.name, actual?.name)
+            XCTAssertEqual(loginApiResponse.data.email, actual?.email)
             XCTAssertEqual(loginApiResponse.data.expireAt, actual?.expireAt)
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")

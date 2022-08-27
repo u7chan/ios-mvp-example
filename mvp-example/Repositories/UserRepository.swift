@@ -19,8 +19,8 @@ final class UserRepository {
 // MARK: - UserRepositoryProtocol
 
 extension UserRepository: UserRepositoryProtocol {
-    func authenticate(userName: String, password: String) async throws {
-        let request = LoginApiRequest(name: userName, password: password)
+    func authenticate(email: String, password: String) async throws {
+        let request = LoginApiRequest(email: email, password: password)
         let result = try await self.loginApi.login(params: request)
         self.signedInUser = result.toUser()
     }

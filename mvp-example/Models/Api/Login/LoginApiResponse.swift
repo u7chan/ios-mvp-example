@@ -14,5 +14,6 @@ struct LoginApiResponse: Codable {
 struct LoginApiResponseData: Codable {
     let id: Int
     let name: String
+    let email: String
     let expireAt: String
 }

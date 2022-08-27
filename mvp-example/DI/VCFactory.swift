@@ -18,6 +18,16 @@ struct VCFactory {
         return vc
     }
 
+    static func createSignupViewController() -> UIViewController {
+        let presenter = SignupPresenter(
+            executor: ExecutorTask(),
+            signupUseCase: SingletonContainer.shared.useCaseModules.signupUseCase
+        )
+        let vc = SignupViewController(presenter: presenter)
+        vc.modalPresentationStyle = .fullScreen
+        return vc
+    }
+
     static func createDashboardViewController() -> UIViewController {
         let presenter = DashboardPresenter()
         let vc = DashboardViewController(presenter: presenter)

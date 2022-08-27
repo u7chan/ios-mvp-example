@@ -20,6 +20,7 @@ extension LoginApiFake: LoginApiProtocol {
           "data": {
             "id": 1,
             "name": "fakejp",
+            "email": "fakejp@example.com",
             "expireAt": "2022-08-26T15:49:57+0900"
           }
         }

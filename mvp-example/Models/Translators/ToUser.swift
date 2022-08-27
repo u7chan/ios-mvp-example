@@ -13,6 +13,7 @@ extension LoginApiResponse {
         return User(
             id: data.id,
             name: data.name,
+            email: data.email,
             expireAt: data.expireAt
         )
     }

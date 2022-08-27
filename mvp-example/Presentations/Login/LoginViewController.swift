@@ -26,7 +26,11 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func loginButton(_ sender: Any) {
-        self.presenter.doLogin(userName: "dummy", password: "hoge")
+        self.presenter.doLogin(email: "dummy", password: "hoge")
+    }
+
+    @IBAction private func signupButton(_ sender: Any) {
+        self.present(VCFactory.createSignupViewController(), animated: true)
     }
 }
 

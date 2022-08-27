@@ -17,5 +17,5 @@ protocol LoginViewProtocol: AnyObject {
 
 protocol LoginPresenterProtocol: AnyObject {
     func attachView(view: LoginViewProtocol)
-    func doLogin(userName: String, password: String)
+    func doLogin(email: String, password: String)
 }
