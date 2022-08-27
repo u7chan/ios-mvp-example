@@ -22,7 +22,30 @@ final class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter.attachView(view: self)
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction private func signupButtonTapped(_ sender: Any) {
+        self.presenter.doSignup(email: "dummy", password: "hoge")
+    }
+}
+
+// MARK: - SignupViewProtocol
+
+extension SignupViewController: SignupViewProtocol {
+    func showProgress() {
+        ProgressHUD.show()
+    }
+
+    func hideProgress() {
+        ProgressHUD.hide()
+    }
+
+    func showError(message: String) {
+        self.showAlert(title: message, message: "", positiveTitle: "OK")
+    }
+
+    func navigateToDashboard() {
+        self.present(VCFactory.createDashboardViewController(), animated: false)
     }
 }

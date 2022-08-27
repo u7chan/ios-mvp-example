@@ -18,29 +18,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-m2-4h6">
-                    <rect key="frame" x="165.5" y="44" width="83.5" height="818"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFa-yW-TGp">
-                    <rect key="frame" x="173.5" y="476" width="67" height="31"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="1oI-Mg-nSr"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CMW-vX-SdO">
+                    <rect key="frame" x="165.5" y="427.5" width="83.5" height="51.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-m2-4h6">
+                            <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFa-yW-TGp">
+                            <rect key="frame" x="0.0" y="20.5" width="83.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                            <connections>
+                                <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="1oI-Mg-nSr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="XZR-za-R0B"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="1u6-m2-4h6" firstAttribute="top" secondItem="XZR-za-R0B" secondAttribute="top" id="Rd9-gS-r9Z"/>
-                <constraint firstItem="mFa-yW-TGp" firstAttribute="bottom" secondItem="1u6-m2-4h6" secondAttribute="bottom" constant="-355" id="cMS-DD-iw9"/>
-                <constraint firstItem="XZR-za-R0B" firstAttribute="bottom" secondItem="1u6-m2-4h6" secondAttribute="bottom" id="dRQ-Ga-Qjx"/>
-                <constraint firstItem="mFa-yW-TGp" firstAttribute="centerX" secondItem="XZR-za-R0B" secondAttribute="centerX" id="jCq-TP-4Y7"/>
-                <constraint firstItem="1u6-m2-4h6" firstAttribute="centerX" secondItem="XZR-za-R0B" secondAttribute="centerX" id="y7p-vK-s7w"/>
+                <constraint firstItem="CMW-vX-SdO" firstAttribute="centerX" secondItem="XZR-za-R0B" secondAttribute="centerX" id="Ocq-r2-e7r"/>
+                <constraint firstItem="CMW-vX-SdO" firstAttribute="centerY" secondItem="XZR-za-R0B" secondAttribute="centerY" id="tKt-Xn-HUu"/>
             </constraints>
             <point key="canvasLocation" x="-313" y="36"/>
         </view>

@@ -46,6 +46,9 @@
                             <rect key="frame" x="140.5" y="182.5" width="73" height="31"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="tinted" title="Sign up"/>
+                            <connections>
+                                <action selector="signupButtonTapped:" destination="-1" eventType="touchUpInside" id="gKn-ro-nBJ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

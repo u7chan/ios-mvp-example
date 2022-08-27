@@ -42,7 +42,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="tinted" title="Sign in"/>
                             <connections>
-                                <action selector="loginButton:" destination="-1" eventType="touchUpInside" id="Jmq-Lf-hRS"/>
+                                <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="1Ib-Jp-kfI"/>
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zDF-bv-WYX">
@@ -60,7 +60,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Signup now"/>
                                     <connections>
-                                        <action selector="signupButton:" destination="-1" eventType="touchUpInside" id="WEl-p6-OVc"/>
+                                        <action selector="signupButtonTapped:" destination="-1" eventType="touchUpInside" id="jXg-NA-YC4"/>
                                     </connections>
                                 </button>
                             </subviews>

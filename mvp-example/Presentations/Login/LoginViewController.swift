@@ -25,11 +25,11 @@ final class LoginViewController: UIViewController {
         self.presenter.attachView(view: self)
     }
 
-    @IBAction private func loginButton(_ sender: Any) {
+    @IBAction private func loginButtonTapped(_ sender: Any) {
         self.presenter.doLogin(email: "dummy", password: "hoge")
     }
 
-    @IBAction private func signupButton(_ sender: Any) {
+    @IBAction private func signupButtonTapped(_ sender: Any) {
         self.present(VCFactory.createSignupViewController(), animated: true)
     }
 }

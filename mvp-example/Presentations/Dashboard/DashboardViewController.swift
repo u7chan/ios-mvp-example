@@ -26,7 +26,6 @@ final class DashboardViewController: UIViewController {
     }
 
     @IBAction private func buttonTapped(_ sender: Any) {
-        //
         self.present(VCFactory.createLoginViewController(), animated: true)
     }
 }
