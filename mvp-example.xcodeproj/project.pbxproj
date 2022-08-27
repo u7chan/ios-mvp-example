@@ -26,8 +26,8 @@
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
 		AC44B8B728ABE45800FAD6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC44B8B628ABE45800FAD6F7 /* Assets.xcassets */; };
 		AC44B8BA28ABE45800FAD6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC44B8B828ABE45800FAD6F7 /* LaunchScreen.storyboard */; };
-		AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D728B50EEA00106F30 /* LoginValidator.swift */; };
-		AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */; };
+		AC59B1D828B50EEA00106F30 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D728B50EEA00106F30 /* UserValidator.swift */; };
+		AC59B1DA28B511FF00106F30 /* UserValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1D928B511FF00106F30 /* UserValidatorTest.swift */; };
 		AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */; };
 		AC59B1E528B5209900106F30 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1E428B5209900106F30 /* ProgressHUD.swift */; };
 		AC59B1E828B520EE00106F30 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AC59B1E728B520EE00106F30 /* PKHUD */; };
@@ -100,8 +100,8 @@
 		AC44B8B928ABE45800FAD6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC44B8BB28ABE45800FAD6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC44B8C028ABE45900FAD6F7 /* mvp-exampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvp-exampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC59B1D728B50EEA00106F30 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
-		AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorTest.swift; sourceTree = "<group>"; };
+		AC59B1D728B50EEA00106F30 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
+		AC59B1D928B511FF00106F30 /* UserValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidatorTest.swift; sourceTree = "<group>"; };
 		AC59B1DB28B51B5000106F30 /* Equatable+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Equatable+Error.swift"; sourceTree = "<group>"; };
 		AC59B1E428B5209900106F30 /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTest.swift; sourceTree = "<group>"; };
@@ -318,8 +318,8 @@
 		AC94C31428AE71E100FBC729 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				AC59B1D728B50EEA00106F30 /* LoginValidator.swift */,
-				AC59B1D928B511FF00106F30 /* LoginValidatorTest.swift */,
+				AC59B1D728B50EEA00106F30 /* UserValidator.swift */,
+				AC59B1D928B511FF00106F30 /* UserValidatorTest.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -593,7 +593,7 @@
 				AC59B1DC28B51B5000106F30 /* Equatable+Error.swift in Sources */,
 				AC94C31628AE722900FBC729 /* LoginApiProtocol.swift in Sources */,
 				AC94C30928ACBD5F00FBC729 /* DashboardProtocols.swift in Sources */,
-				AC59B1D828B50EEA00106F30 /* LoginValidator.swift in Sources */,
+				AC59B1D828B50EEA00106F30 /* UserValidator.swift in Sources */,
 				AC1556FD28BA48A800190D48 /* SignupUseCase.swift in Sources */,
 				AC94C33928AFEC7B00FBC729 /* ReopositoryModules.swift in Sources */,
 				AC94C32428AE773C00FBC729 /* LoginApiFake.swift in Sources */,
@@ -627,7 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC59B1DA28B511FF00106F30 /* LoginValidatorTest.swift in Sources */,
+				AC59B1DA28B511FF00106F30 /* UserValidatorTest.swift in Sources */,
 				AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */,
 				AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */,
 				AC1556F028BA456000190D48 /* GeneratedMocks.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  LoginValidator.swift
+//  UserValidator.swift
 //  mvp-example
 //
 //  Created by unagami on 2022/08/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginValidator {
+struct UserValidator {
     struct Const {
         static let kEmailError = "Email cannot be empty."
         static let kPasswordError = "Password cannot be empty."
