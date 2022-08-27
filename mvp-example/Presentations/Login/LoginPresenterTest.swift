@@ -112,4 +112,12 @@ final class LoginPresenterTest: XCTestCase {
             XCTAssertEqual(1, self.viewMock.showErrorCallCount)
         }
     }
+
+    func test_サインアップボタン押下_正常系() throws {
+        self.presenter.signupButtonTapped()
+
+        XCTContext.runActivity(named: "画面遷移の呼び出しを検証") { _ in
+            XCTAssertEqual(1, self.viewMock.navigateToSignupCallCount)
+        }
+    }
 }
