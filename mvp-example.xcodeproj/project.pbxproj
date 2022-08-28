@@ -38,7 +38,7 @@
 		AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */; };
 		AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */; };
 		AC59B1F028B662F400106F30 /* ExecutorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */; };
-		AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F128B6645B00106F30 /* ExecutorTask.swift */; };
+		AC59B1F228B6645B00106F30 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F128B6645B00106F30 /* Executor.swift */; };
 		AC59B1F928B66A6300106F30 /* ExecutorXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */; };
 		AC59B1FC28B6729300106F30 /* UserRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59B1FA28B6728600106F30 /* UserRepositoryTest.swift */; };
 		AC94C30328ACB7E700FBC729 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */; };
@@ -113,7 +113,7 @@
 		AC59B1E928B5241D00106F30 /* LoginUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTest.swift; sourceTree = "<group>"; };
 		AC59B1EB28B5282600106F30 /* XCTestCase+runAsyncTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+runAsyncTest.swift"; sourceTree = "<group>"; };
 		AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorProtocol.swift; sourceTree = "<group>"; };
-		AC59B1F128B6645B00106F30 /* ExecutorTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorTask.swift; sourceTree = "<group>"; };
+		AC59B1F128B6645B00106F30 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 		AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorXCTest.swift; sourceTree = "<group>"; };
 		AC59B1FA28B6728600106F30 /* UserRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTest.swift; sourceTree = "<group>"; };
 		AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -283,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */,
-				AC59B1F128B6645B00106F30 /* ExecutorTask.swift */,
+				AC59B1F128B6645B00106F30 /* Executor.swift */,
 				AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */,
 				AC22810928BBB73C00F07615 /* ExecutorTest.swift */,
 			);
@@ -597,7 +597,7 @@
 				AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */,
 				AC94C33528AFE85600FBC729 /* UIViewController+alert.swift in Sources */,
 				AC1556E328B91DB700190D48 /* CreateAccountApiResponse.swift in Sources */,
-				AC59B1F228B6645B00106F30 /* ExecutorTask.swift in Sources */,
+				AC59B1F228B6645B00106F30 /* Executor.swift in Sources */,
 				AC1556EA28B91FE200190D48 /* ToUser.swift in Sources */,
 				AC1556EC28B927C900190D48 /* String+decodeJSON.swift in Sources */,
 				AC94C30728ACBD2A00FBC729 /* DashboardPresenter.swift in Sources */,

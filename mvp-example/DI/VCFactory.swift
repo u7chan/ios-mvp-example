@@ -10,7 +10,7 @@ import UIKit
 struct VCFactory {
     static func createLoginViewController() -> UIViewController {
         let presenter = LoginPresenter(
-            executor: ExecutorTask(),
+            executor: Executor(),
             loginUseCase: SingletonContainer.shared.useCaseModules.loginUseCase
         )
         let vc = LoginViewController(presenter: presenter)
@@ -20,7 +20,7 @@ struct VCFactory {
 
     static func createSignupViewController() -> UIViewController {
         let presenter = SignupPresenter(
-            executor: ExecutorTask(),
+            executor: Executor(),
             signupUseCase: SingletonContainer.shared.useCaseModules.signupUseCase
         )
         let vc = SignupViewController(presenter: presenter)
