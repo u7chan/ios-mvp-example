@@ -21,6 +21,7 @@
 		AC1556F928BA47C000190D48 /* SignupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556F828BA47C000190D48 /* SignupProtocols.swift */; };
 		AC1556FD28BA48A800190D48 /* SignupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556FC28BA48A800190D48 /* SignupUseCase.swift */; };
 		AC1556FF28BA48B600190D48 /* SignupUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556FE28BA48B600190D48 /* SignupUseCaseProtocol.swift */; };
+		AC2280FF28BBAA0200F07615 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AC2280FE28BBAA0200F07615 /* Nimble */; };
 		AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */; };
 		AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */; };
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
@@ -147,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC59B1E828B520EE00106F30 /* PKHUD in Frameworks */,
+				AC2280FF28BBAA0200F07615 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +447,7 @@
 			name = "mvp-example";
 			packageProductDependencies = (
 				AC59B1E728B520EE00106F30 /* PKHUD */,
+				AC2280FE28BBAA0200F07615 /* Nimble */,
 			);
 			productName = "mvp-example";
 			productReference = AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */;
@@ -499,6 +502,7 @@
 			mainGroup = AC44B8A128ABE45500FAD6F7;
 			packageReferences = (
 				AC59B1E228B5202400106F30 /* XCRemoteSwiftPackageReference "PKHUD" */,
+				AC2280FD28BBAA0200F07615 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = AC44B8AB28ABE45500FAD6F7 /* Products */;
 			projectDirPath = "";
@@ -897,6 +901,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AC2280FD28BBAA0200F07615 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = exactVersion;
+				version = 10.0.0;
+			};
+		};
 		AC59B1E228B5202400106F30 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pkluz/PKHUD.git";
@@ -908,6 +920,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AC2280FE28BBAA0200F07615 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC2280FD28BBAA0200F07615 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
 		AC59B1E728B520EE00106F30 /* PKHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AC59B1E228B5202400106F30 /* XCRemoteSwiftPackageReference "PKHUD" */;
