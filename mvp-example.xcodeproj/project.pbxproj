@@ -23,6 +23,8 @@
 		AC1556FF28BA48B600190D48 /* SignupUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1556FE28BA48B600190D48 /* SignupUseCaseProtocol.swift */; };
 		AC22810228BBAD4E00F07615 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AC22810128BBAD4E00F07615 /* Quick */; };
 		AC22810528BBAFB500F07615 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AC22810428BBAFB500F07615 /* Nimble */; };
+		AC22810728BBB07100F07615 /* LoginPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22810628BBB07100F07615 /* LoginPresenterSpec.swift */; };
+		AC22810A28BBB73C00F07615 /* ExecutorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22810928BBB73C00F07615 /* ExecutorTest.swift */; };
 		AC44B8AE28ABE45500FAD6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */; };
 		AC44B8B028ABE45500FAD6F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */; };
 		AC44B8B228ABE45500FAD6F7 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44B8B128ABE45500FAD6F7 /* DashboardViewController.swift */; };
@@ -94,6 +96,8 @@
 		AC1556F828BA47C000190D48 /* SignupProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocols.swift; sourceTree = "<group>"; };
 		AC1556FC28BA48A800190D48 /* SignupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCase.swift; sourceTree = "<group>"; };
 		AC1556FE28BA48B600190D48 /* SignupUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCaseProtocol.swift; sourceTree = "<group>"; };
+		AC22810628BBB07100F07615 /* LoginPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterSpec.swift; sourceTree = "<group>"; };
+		AC22810928BBB73C00F07615 /* ExecutorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutorTest.swift; sourceTree = "<group>"; };
 		AC44B8AA28ABE45500FAD6F7 /* mvp-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvp-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44B8AD28ABE45500FAD6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC44B8AF28ABE45500FAD6F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				AC59B1EF28B662F400106F30 /* ExecutorProtocol.swift */,
 				AC59B1F128B6645B00106F30 /* ExecutorTask.swift */,
 				AC59B1F328B664EE00106F30 /* ExecutorXCTest.swift */,
+				AC22810928BBB73C00F07615 /* ExecutorTest.swift */,
 			);
 			path = Async;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				AC94C30428ACBC7E00FBC729 /* LoginProtocols.swift */,
 				AC94C30228ACB7E700FBC729 /* LoginPresenter.swift */,
 				ACBCF08A28B278550076AEEF /* LoginPresenterTest.swift */,
+				AC22810628BBB07100F07615 /* LoginPresenterSpec.swift */,
 				ACEFA54B28ABF4B400B7355A /* LoginViewController.swift */,
 				ACEFA54D28ABF4C300B7355A /* LoginViewController.xib */,
 			);
@@ -636,10 +642,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC59B1DA28B511FF00106F30 /* UserValidatorTest.swift in Sources */,
+				AC22810728BBB07100F07615 /* LoginPresenterSpec.swift in Sources */,
 				AC59B1ED28B5283F00106F30 /* XCTestCase+runAsyncTest.swift in Sources */,
 				AC1556ED28B927C900190D48 /* String+decodeJSON.swift in Sources */,
 				AC1556F028BA456000190D48 /* GeneratedMocks.swift in Sources */,
 				AC59B1FC28B6729300106F30 /* UserRepositoryTest.swift in Sources */,
+				AC22810A28BBB73C00F07615 /* ExecutorTest.swift in Sources */,
 				AC59B1EA28B5241D00106F30 /* LoginUseCaseTest.swift in Sources */,
 				ACBCF08B28B278550076AEEF /* LoginPresenterTest.swift in Sources */,
 				AC59B1F928B66A6300106F30 /* ExecutorXCTest.swift in Sources */,
