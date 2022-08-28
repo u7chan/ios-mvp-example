@@ -30,9 +30,11 @@ MVP + UseCase + Repository
 
 ## 利用パッケージ
 
-| 項目                                          | 概要                     | ライセンス  |
-| --------------------------------------------- | ------------------------ | ----------- |
-| [pkluz/PKHUD](https://github.com/pkluz/PKHUD) | Swift 製のインジケーター | MIT License |
+| 項目                                            | 概要                     | ライセンス         |
+| ----------------------------------------------- | ------------------------ | ------------------ |
+| [pkluz/PKHUD](https://github.com/pkluz/PKHUD)   | Swift 製のインジケーター | MIT License        |
+| [Quick/Quick](https://github.com/Quick/Quick)   | テストフレームワーク     | Apache-2.0 license |
+| [Quick/Nimble](https://github.com/Quick/Nimble) | アサーションやマッチャー | Apache-2.0 license |
 
 ## Run unit test for CLI
 
