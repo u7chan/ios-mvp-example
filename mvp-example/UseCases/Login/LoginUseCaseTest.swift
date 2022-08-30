@@ -18,47 +18,52 @@ final class LoginUseCaseTest: XCTestCase {
     }
 
     func test_ユースケースの実行_正常系() throws {
-        XCTContext.runActivity(named: "リポジトリメソッドのパラメータを検証") { _ in
-            self.repositoryMock.authenticateHandler = { (email, password) in
-                XCTAssertEqual("#email", email)
-                XCTAssertEqual("#password", password)
-            }
+        // Given
+        let expectEmail = "#email"
+        let expectPassword = "#password"
+        var actualEmail = ""
+        var actualPassword = ""
+        self.repositoryMock.authenticateHandler = { (email, password) in
+            actualEmail = email
+            actualPassword = password
         }
 
+        // When
         self.runAsyncTest {
-            try await self.useCase.invoke(email: "#email", password: "#password")
+            try await self.useCase.invoke(email: expectEmail, password: expectPassword)
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
 
-        XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.repositoryMock.authenticateCallCount)
-        }
+        // Then
+        XCTAssertEqual(expectEmail, actualEmail)
+        XCTAssertEqual(expectPassword, actualPassword)
+        XCTAssertEqual(1, self.repositoryMock.authenticateCallCount)
     }
 
     func test_ユースケースの実行_異常系_userNameEmpty() throws {
+        // When
         self.runAsyncTest {
-            try await self.useCase.invoke(email: "", password: "#password")
+            try await self.useCase.invoke(email: "", password: "#any")
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
         }
 
-        XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(0, self.repositoryMock.authenticateCallCount)
-        }
+        // Then
+        XCTAssertEqual(0, self.repositoryMock.authenticateCallCount)
     }
 
     func test_ユースケースの実行_異常系_passwordEmpty() throws {
+        // When
         self.runAsyncTest {
-            try await self.useCase.invoke(email: "#user", password: "")
+            try await self.useCase.invoke(email: "#any", password: "")
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
         }
 
-        XCTContext.runActivity(named: "リポジトリメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(0, self.repositoryMock.authenticateCallCount)
-        }
+        // Then
+        XCTAssertEqual(0, self.repositoryMock.authenticateCallCount)
     }
 }

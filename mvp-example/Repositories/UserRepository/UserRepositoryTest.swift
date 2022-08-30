@@ -23,7 +23,12 @@ final class UserRepositoryTest: XCTestCase {
     }
 
     func test_認証処理_正常系() throws {
-        let loginApiResponse = try """
+        // Given
+        let expectEmail = "#email"
+        let expectPassword = "#password"
+        var actualEmail = ""
+        var actualPassword = ""
+        let expectLoginApiResponse = try """
         {
           "data": {
             "id": 1,
@@ -34,44 +39,47 @@ final class UserRepositoryTest: XCTestCase {
         }
         """.decodeJSON(LoginApiResponse.self)
 
-        XCTContext.runActivity(named: "APIメソッドのパラメータを検証") { _ in
-            self.loginApiMock.loginHandler = { (params) in
-                XCTAssertEqual("#email", params.email)
-                XCTAssertEqual("#password", params.password)
-                return loginApiResponse
-            }
+        self.loginApiMock.loginHandler = { (params) in
+            actualEmail = params.email
+            actualPassword = params.password
+            return expectLoginApiResponse
         }
 
+        // When
         self.runAsyncTest {
             try await self.repository.authenticate(email: "#email", password: "#password")
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
 
-        XCTContext.runActivity(named: "APIメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.loginApiMock.loginCallCount)
-        }
+        // Then
+        XCTAssertEqual(expectEmail, actualEmail)
+        XCTAssertEqual(expectPassword, actualPassword)
+        XCTAssertEqual(1, self.loginApiMock.loginCallCount)
     }
 
     func test_認証処理_異常系() throws {
+        // Given
         self.loginApiMock.loginHandler = { (_) in
             throw ApiError.serverError
         }
 
+        // When
         self.runAsyncTest {
-            try await self.repository.authenticate(email: "#email", password: "#password")
+            try await self.repository.authenticate(email: "#any", password: "#any")
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         } catchError: { _ in
             // NOP
         }
 
-        XCTContext.runActivity(named: "APIメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.loginApiMock.loginCallCount)
-        }
+        // Then
+        XCTAssertEqual(1, self.loginApiMock.loginCallCount)
     }
 
     func test_サインイン済みユーザーを取得_正常系() throws {
-        let loginApiResponse = try """
+        // Given
+        var actualUser: User?
+        let expectLoginApiResponse = try """
         {
           "data": {
             "id": 1,
@@ -83,27 +91,37 @@ final class UserRepositoryTest: XCTestCase {
         """.decodeJSON(LoginApiResponse.self)
 
         self.loginApiMock.loginHandler = { (_) in
-            loginApiResponse
+            expectLoginApiResponse
         }
 
+        // When
         self.runAsyncTest {
             try await self.repository.authenticate(email: "#email", password: "#password")
-            let actual = try await self.repository.fetchSignedInUser()
-            XCTAssertEqual(loginApiResponse.data.id, actual?.id)
-            XCTAssertEqual(loginApiResponse.data.name, actual?.name)
-            XCTAssertEqual(loginApiResponse.data.email, actual?.email)
-            XCTAssertEqual(loginApiResponse.data.expireAt, actual?.expireAt)
+            actualUser = try await self.repository.fetchSignedInUser()
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
+
+        // Then
+        XCTAssertNotNil(actualUser)
+        XCTAssertEqual(expectLoginApiResponse.data.id, actualUser?.id)
+        XCTAssertEqual(expectLoginApiResponse.data.name, actualUser?.name)
+        XCTAssertEqual(expectLoginApiResponse.data.email, actualUser?.email)
+        XCTAssertEqual(expectLoginApiResponse.data.expireAt, actualUser?.expireAt)
     }
 
     func test_未サインインユーザーを取得_準正常系() throws {
+        // Given
+        var actualUser: User?
+
+        // When
         self.runAsyncTest {
-            let actual = try await self.repository.fetchSignedInUser()
-            XCTAssertNil(actual)
+            actualUser = try await self.repository.fetchSignedInUser()
         } catchError: { _ in
             XCTFail("[!] ここが呼ばれたらテストに失敗")
         }
+
+        // Then
+        XCTAssertNil(actualUser)
     }
 }
