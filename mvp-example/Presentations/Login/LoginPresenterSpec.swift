@@ -25,18 +25,31 @@ final class LoginPresenterSpec: QuickSpec {
 
             context("ログインボタン押下") {
                 it("正常系") {
+                    // Given
+                    let expectEmail = "#email"
+                    let expectPassword = "#password"
+                    var actualEmail = ""
+                    var actualPassword = ""
                     useCaseMock.invokeHandler = { (email, password) in
-                        expect(email).to(equal("#email"))
-                        expect(password).to(equal("#password"))
+                        actualEmail = email
+                        actualPassword = password
                     }
+
+                    // When
                     waitUntil { done in
-                        presenter.loginButtonTapped(email: "#email", password: "#password")
+                        presenter.loginButtonTapped(email: expectEmail, password: expectPassword)
                         viewMock.navigateToDashboardHandler = {
                             done()
                         }
                     }
+
+                    // Then
+                    expect(actualEmail).to(equal(expectEmail))
+                    expect(actualPassword).to(equal(expectPassword))
+                    expect(viewMock.hideProgressCallCount).to(equal(1))
                     expect(viewMock.showProgressCallCount).to(equal(1))
                     expect(viewMock.hideProgressCallCount).to(equal(1))
+                    expect(viewMock.navigateToDashboardCallCount).to(equal(1))
                 }
             }
         }

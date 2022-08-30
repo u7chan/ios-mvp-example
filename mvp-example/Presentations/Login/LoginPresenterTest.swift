@@ -21,103 +21,95 @@ final class LoginPresenterTest: XCTestCase {
     }
 
     func test_ログインボタン押下_正常系() throws {
-        XCTContext.runActivity(named: "ユースケースメソッドのパラメータを検証") { _ in
-            self.useCaseMock.invokeHandler = { (email, password) in
-                XCTAssertEqual("#email", email)
-                XCTAssertEqual("#password", password)
-            }
+        // Given
+        let expectEmail = "#email"
+        let expectPassword = "#password"
+        var actualEmail = ""
+        var actualPassword = ""
+        self.useCaseMock.invokeHandler = { (email, password) in
+            actualEmail = email
+            actualPassword = password
         }
 
-        self.presenter.loginButtonTapped(email: "#email", password: "#password")
+        // When
+        self.presenter.loginButtonTapped(email: expectEmail, password: expectPassword)
 
-        XCTContext.runActivity(named: "プログレス表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.showProgressCallCount)
-        }
-
-        XCTContext.runActivity(named: "ユースケースメソッドの呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.useCaseMock.invokeCallCount)
-        }
-
-        XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
-        }
-
-        XCTContext.runActivity(named: "画面遷移の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.navigateToDashboardCallCount)
-        }
+        // Then
+        XCTAssertEqual(expectEmail, actualEmail)
+        XCTAssertEqual(expectPassword, actualPassword)
+        XCTAssertEqual(1, self.viewMock.showProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.navigateToDashboardCallCount)
     }
 
     func test_ログインボタン押下_異常系_unknownError() throws {
+        // Given
+        let expectErrorMessage = "予期せぬエラーが発生しました"
+        var actualErrorMessage = ""
         self.useCaseMock.invokeHandler = { (_, _) in
-            throw NSError(domain: "Test", code: -1) // Throwing unknown error
+            throw NSError(domain: "Test", code: -1) // Unknown error
+        }
+        self.viewMock.showErrorHandler = { (message) in
+            actualErrorMessage = message
         }
 
-        XCTContext.runActivity(named: "エラー表示の文言を検証") { _ in
-            self.viewMock.showErrorHandler = { (message) in
-                XCTAssertEqual("予期せぬエラーが発生しました", message)
-            }
-        }
-
+        // When
         self.presenter.loginButtonTapped(email: "", password: "")
 
-        XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
-        }
-
-        XCTContext.runActivity(named: "エラー表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.showErrorCallCount)
-        }
+        // Then
+        XCTAssertEqual(expectErrorMessage, actualErrorMessage)
+        XCTAssertEqual(1, self.viewMock.showProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.showErrorCallCount)
     }
 
     func test_ログインボタン押下_異常系_networkUnableError() throws {
+        // Given
+        let expectErrorMessage = "ネットワークに接続できませんでした"
+        var actualErrorMessage = ""
         self.useCaseMock.invokeHandler = { (_, _) in
             throw ApiError.networkUnableError
         }
-
-        XCTContext.runActivity(named: "エラー表示の文言を検証") { _ in
-            self.viewMock.showErrorHandler = { (message) in
-                XCTAssertEqual("ネットワークに接続できませんでした", message)
-            }
+        self.viewMock.showErrorHandler = { (message) in
+            actualErrorMessage = message
         }
 
+        // When
         self.presenter.loginButtonTapped(email: "", password: "")
 
-        XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
-        }
-
-        XCTContext.runActivity(named: "エラー表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.showErrorCallCount)
-        }
+        // Then
+        XCTAssertEqual(expectErrorMessage, actualErrorMessage)
+        XCTAssertEqual(1, self.viewMock.showProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.showErrorCallCount)
     }
 
     func test_ログインボタン押下_異常系_validationError() throws {
+        // Given
+        let expectErrorMessage = "#any_validation_error"
+        var actualErrorMessage = ""
         self.useCaseMock.invokeHandler = { (_, _) in
-            throw DomainError.validationError(reason: "#invalid")
+            throw DomainError.validationError(reason: expectErrorMessage)
+        }
+        self.viewMock.showErrorHandler = { (message) in
+            actualErrorMessage = message
         }
 
-        XCTContext.runActivity(named: "エラー表示の文言を検証") { _ in
-            self.viewMock.showErrorHandler = { (message) in
-                XCTAssertEqual("#invalid", message)
-            }
-        }
-
+        // When
         self.presenter.loginButtonTapped(email: "", password: "")
 
-        XCTContext.runActivity(named: "プログレス非表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
-        }
-
-        XCTContext.runActivity(named: "エラー表示の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.showErrorCallCount)
-        }
+        // Then
+        XCTAssertEqual(expectErrorMessage, actualErrorMessage)
+        XCTAssertEqual(1, self.viewMock.showProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.hideProgressCallCount)
+        XCTAssertEqual(1, self.viewMock.showErrorCallCount)
     }
 
     func test_サインアップボタン押下_正常系() throws {
+        // When
         self.presenter.signupButtonTapped()
 
-        XCTContext.runActivity(named: "画面遷移の呼び出しを検証") { _ in
-            XCTAssertEqual(1, self.viewMock.navigateToSignupCallCount)
-        }
+        // Then
+        XCTAssertEqual(1, self.viewMock.navigateToSignupCallCount)
     }
 }
